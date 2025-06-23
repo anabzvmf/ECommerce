@@ -1,0 +1,12 @@
+páginas:
+    1- Home
+        Elementos:
+            - Header (Menu, Search, Login, Logo)
+    2- Produtos:
+        Elementos:
+            - Caixa com Produtos
+            - Cada caixa poderá ser selecionada e terá um valor de "quantidade"
+            - Itens selecionados irão para o carrinho
+    3- Carrinho:
+        - Vai ter um botão no Header
+        - Lista de itens selecionados com a quantidade

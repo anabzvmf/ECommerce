@@ -1,0 +1,111 @@
+﻿@page "/compras"
+@using Aula4BlazorComponentes.Componentes
+
+<div class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">Minha Lista de Desejos</h1>
+
+    <!-- Lista de Produtos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        @foreach (var produto in ListaDesejos)
+        {
+            <div class="relative">
+                <ProductCard 
+                    Title="@produto.Nome" 
+                    Price="@produto.Preco.ToString("C")" 
+                    Image="@produto.Imagem" />
+                
+                <!-- Botão Remover -->
+                <button @onclick="() => RemoverDaLista(produto.Id)"
+                        class="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full 
+                               hover:bg-red-600 transition-colors shadow-md"
+                        title="Remover">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        }
+    </div>
+
+    <!-- Resumo e Ações -->
+    <div class="bg-white rounded-lg shadow-md p-6 sticky bottom-4 border border-gray-200">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="text-lg font-semibold">Total: <span class="text-blue-600">@TotalLista.ToString("C")</span></p>
+                <p class="text-sm text-gray-500">@ListaDesejos.Count iten(s) na lista</p>
+            </div>
+            
+            <div class="flex gap-4">
+                <button @onclick="LimparLista"
+                        class="px-4 py-2 border border-red-500 text-red-500 rounded-md 
+                               hover:bg-red-50 transition-colors">
+                    Limpar Lista
+                </button>
+                
+                <button @onclick="FinalizarCompra"
+                        class="px-6 py-2 bg-blue-600 text-white rounded-md 
+                               hover:bg-blue-700 transition-colors">
+                    Finalizar Compra (@ListaDesejos.Count)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensagem quando vazio -->
+    @if (!ListaDesejos.Any())
+    {
+        <div class="text-center py-12">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+            <h3 class="mt-4 text-lg font-medium text-gray-900">Sua lista de desejos está vazia</h3>
+            <p class="mt-1 text-gray-500">Adicione produtos para vê-los aqui</p>
+            <a href="/" class="mt-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                Continuar comprando
+            </a>
+        </div>
+    }
+</div>
+
+@code {
+    private List<ProdutoDesejo> ListaDesejos = new()
+    {
+        new ProdutoDesejo(1, "Notebook Gamer", 4999.90m, "/img/computador.png"),
+        new ProdutoDesejo(2, "Smartphone Premium", 2399.90m, "/img/celular.png"),
+        new ProdutoDesejo(3, "Tablet Pro", 1899.90m, "/img/ipad.png")
+    };
+
+    private decimal TotalLista => ListaDesejos.Sum(p => p.Preco);
+
+    private void RemoverDaLista(int id)
+    {
+        ListaDesejos.RemoveAll(p => p.Id == id);
+    }
+
+    private void LimparLista()
+    {
+        ListaDesejos.Clear();
+    }
+
+    private void FinalizarCompra()
+    {
+        // Lógica para finalizar compra
+        // Pode redirecionar para o carrinho ou checkout
+    }
+
+    private class ProdutoDesejo
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public decimal Preco { get; set; }
+        public string Imagem { get; set; }
+
+        public ProdutoDesejo(int id, string nome, decimal preco, string imagem)
+        {
+            Id = id;
+            Nome = nome;
+            Preco = preco;
+            Imagem = imagem;
+        }
+    }
+}

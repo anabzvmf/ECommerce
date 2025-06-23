@@ -1,0 +1,27 @@
+﻿@inherits LayoutComponentBase
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce do Vianna</title>
+    <HeadContent />
+    <!-- Tailwind via CDN (ou referencie seu arquivo local) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar Fixo -->
+    <NavMenu />
+
+    <!-- Área de Conteúdo Dinâmico -->
+    <main class="container mx-auto p-4 min-h-[calc(100vh-160px)]">
+        @Body
+    </main>
+
+    <!-- Rodapé Fixo -->
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        © @DateTime.Now.Year - E-Commerce do Vianna
+    </footer>
+</body>
+</html>

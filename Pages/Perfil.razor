@@ -1,0 +1,141 @@
+﻿@page "/perfil"
+@inject NavigationManager NavigationManager
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Cabeçalho -->
+    <div class="flex justify-between items-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 dark:text-blue">Meu Perfil</h1>
+        
+        <!-- Switch Modo Escuro -->
+        <label class="flex items-center cursor-pointer">
+            <div class="relative">
+                <input type="checkbox" class="sr-only" @bind="ModoEscuro" />
+                <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition transform @(ModoEscuro ? "translate-x-6 bg-blue-500" : "")"></div>
+            </div>
+            <div class="ml-3 text-gray-700 dark:text-gray-300 font-medium">
+                Modo Escuro
+            </div>
+        </label>
+    </div>
+
+    <!-- Card de Perfil -->
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <div class="p-6">
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Informações -->
+                <div class="flex-grow">
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">@Nome</h2>
+                    <p class="text-gray-600 dark:text-gray-300">@Email</p>
+                    
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Telefone</label>
+                            <p class="text-gray-800 dark:text-white">@Telefone</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Data de Nascimento</label>
+                            <p class="text-gray-800 dark:text-white">@Nascimento.ToShortDateString()</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">CPF</label>
+                            <p class="text-gray-800 dark:text-white">@Cpf</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Endereço</label>
+                            <p class="text-gray-800 dark:text-white">@Endereco</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="mt-8 flex flex-wrap gap-4">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                    Editar Perfil
+                </button>
+                <button @onclick="Logout" 
+                        class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
+                    Sair da Conta
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Histórico de Pedidos -->
+    <div class="mt-8">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Meus Pedidos</h2>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                <thead class="bg-gray-50 dark:bg-gray-700">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Nº Pedido</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Data</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Valor</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                    @foreach (var pedido in Pedidos){
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-white">@pedido.Numero</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-white">@pedido.Data.ToShortDateString()</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-white">@pedido.Valor.ToString("C")</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
+                                      @(pedido.Status == "Entregue" ? "bg-green-100 text-green-800" : 
+                                        pedido.Status == "Cancelado" ? "bg-red-100 text-red-800" : 
+                                        "bg-yellow-100 text-yellow-800")">
+                                    @pedido.Status
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Dados do usuário
+    private string Nome = "João da Silva";
+    private string Email = "joao.silva@email.com";
+    private string Telefone = "(11) 98765-4321";
+    private DateTime Nascimento = new DateTime(1985, 5, 15);
+    private string Cpf = "123.456.789-00";
+    private string Endereco = "Rua Exemplo, 123 - São Paulo/SP";
+
+    // Modo escuro
+    private bool ModoEscuro { get; set; } = false;
+
+    // Pedidos
+    private List<Pedido> Pedidos = new()
+    {
+        new Pedido("#1001", DateTime.Now.AddDays(-5), 499.90m, "Entregue"),
+        new Pedido("#1002", DateTime.Now.AddDays(-2), 129.90m, "Em transporte"),
+        new Pedido("#1003", DateTime.Now.AddDays(-1), 89.90m, "Processando")
+    };
+
+    private void Logout()
+    {
+        // Lógica de logout (limpar token, etc.)
+        NavigationManager.NavigateTo("/", forceLoad: true);
+    }
+
+    private class Pedido
+    {
+        public string Numero { get; set; }
+        public DateTime Data { get; set; }
+        public decimal Valor { get; set; }
+        public string Status { get; set; }
+
+        public Pedido(string numero, DateTime data, decimal valor, string status)
+        {
+            Numero = numero;
+            Data = data;
+            Valor = valor;
+            Status = status;
+        }
+    }
+}
