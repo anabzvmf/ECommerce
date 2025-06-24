@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\ECommerce.csproj": {}
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\ECommerce.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\ECommerce.csproj": {
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\ECommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\ECommerce.csproj",
+        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\ECommerce.csproj",
         "projectName": "ECommerce",
-        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\ECommerce.csproj",
+        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\ECommerce.csproj",
         "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\obj\\",
+        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Aula4BlazorComponentes.sln"
+                "${workspaceFolder}/ECommerce.sln"
             ],
             "problemMatcher": "$msCompile"
         }

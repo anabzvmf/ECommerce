@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6MqHCkQBt0M=",
+  "dgSpecHash": "SNY/mc6Q93w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\ECommerce.csproj",
+  "projectFilePath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\ECommerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Iago\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.0\\microsoft.aspnetcore.authorization.9.0.0.nupkg.sha512",
     "C:\\Users\\Iago\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.0\\microsoft.aspnetcore.components.9.0.0.nupkg.sha512",
