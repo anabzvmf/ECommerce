@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj": {}
+    "c:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj": {
+    "c:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
+        "projectUniqueName": "c:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
+        "projectPath": "c:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
         "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\obj\\",
+        "outputPath": "c:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,24 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "SnowflakeGenerator": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

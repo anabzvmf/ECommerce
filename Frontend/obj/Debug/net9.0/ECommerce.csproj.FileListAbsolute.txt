@@ -199,8 +199,6 @@ C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framewo
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\ECommerce.sk76llhdyy.wasm
-C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\ECommerce.jx02unvmsy.pdb
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.qe23mgxr71.wasm.gz
@@ -403,8 +401,6 @@ C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framewo
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\ECommerce.sk76llhdyy.wasm.gz
-C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\ECommerce.jx02unvmsy.pdb.gz
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json.gz
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\ECommerce.staticwebassets.runtime.json
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\ECommerce.staticwebassets.endpoints.json
@@ -1071,9 +1067,6 @@ C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\ienn4
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\czqevygs6a-tjcz0u77k5.gz
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\cp1wuzg2n0-tptq2av103.gz
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\i90jeafjcg-lfu7j35m59.gz
-C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\g7bzyufpx6-sk76llhdyy.gz
-C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\9j7ihw2gey-jx02unvmsy.gz
-C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\1nzj7h4phi-n1qg30bge9.gz
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\staticwebassets.development.json
@@ -1083,3 +1076,10 @@ C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\ECommerce.dll
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\refint\ECommerce.dll
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\ECommerce.pdb
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\ref\ECommerce.dll
+C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\ECommerce.1xr0v3hxct.wasm
+C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\ECommerce.xqny9rj7tt.pdb
+C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\ECommerce.1xr0v3hxct.wasm.gz
+C:\Users\Iago\Documents\PWA\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\ECommerce.xqny9rj7tt.pdb.gz
+C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\g7bzyufpx6-1xr0v3hxct.gz
+C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\9j7ihw2gey-xqny9rj7tt.gz
+C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\compressed\1nzj7h4phi-m63ho5k14n.gz

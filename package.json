@@ -4,6 +4,12 @@
     "tailwindcss": "^4.1.4"
   },
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./wwwroot/css/input.css -o ./wwwroot/css/output.css --watch"
+    "backend": "cd backend && dotnet run",
+    "frontend": "cd frontend && dotnet run",
+    "tailwind": "npx @tailwindcss/cli -i ./Frontend/wwwroot/css/input.css -o ./Frontend/wwwroot/css/output.css --watch",
+    "dev": "concurrently -n BACKEND,FRONTEND,TAILWIND -c blue,green,magenta \"npm run backend\" \"npm run frontend\" \"npm run tailwind\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
   }
 }

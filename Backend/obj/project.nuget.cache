@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PI4YZYrXvXs=",
+  "dgSpecHash": "nBo5aAsfUVE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\backend\\Backend.csproj",
+  "projectFilePath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Iago\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\Iago\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.5\\microsoft.aspnetcore.authentication.jwtbearer.9.0.5.nupkg.sha512",
