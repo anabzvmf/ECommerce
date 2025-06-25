@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xdra9/PB2Ic=",
+  "dgSpecHash": "0CaS3ZW3aSk=",
   "success": true,
-  "projectFilePath": "c:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
+  "projectFilePath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Iago\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\Iago\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",

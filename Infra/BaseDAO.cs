@@ -4,7 +4,7 @@ using Microsoft.Data.Sqlite;
 using SnowflakeGenerator;
 using System.Reflection;
 
-namespace Blogs.Infra;
+namespace Infra;
 
 public abstract class BaseDAO<T> : IBaseDAO<T> where T : IModel
 {

@@ -901,6 +901,16 @@
             "rid": "browser"
           }
         }
+      },
+      "Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Model.dll": {}
+        }
       }
     }
   },
@@ -2085,6 +2095,11 @@
         "system.text.encodings.web.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Model/1.0.0": {
+      "type": "project",
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2092,6 +2107,7 @@
       "Dapper >= 2.1.66",
       "Microsoft.AspNetCore.Identity >= 2.3.1",
       "Microsoft.Data.Sqlite >= 9.0.5",
+      "Model >= 1.0.0",
       "SnowflakeGenerator >= 2.0.0"
     ]
   },
@@ -2101,11 +2117,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
+      "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
       "projectName": "Infra",
-      "projectPath": "c:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
+      "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
       "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\obj\\",
+      "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2122,7 +2138,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

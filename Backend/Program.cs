@@ -1,4 +1,8 @@
-// using Backend.Endpoints;
+using Infra.ControlesAcessos;
+using Model.ControleAcessos;
+using Microsoft.AspNetCore.Identity;
+using Backend.Endpoints;
+using Infra.Produtos;
 using Backend;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -54,7 +58,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// app.AdicionarTodosEndpoints();
+app.AdicionarTodosEndpoints();
 
 app.UseCors(builder => builder
     .AllowAnyOrigin()
