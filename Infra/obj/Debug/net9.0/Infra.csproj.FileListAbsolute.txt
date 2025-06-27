@@ -15,3 +15,20 @@ C:\Users\Iago\Documents\PWA\ECommerce\Infra\obj\Debug\net9.0\Infra.dll
 C:\Users\Iago\Documents\PWA\ECommerce\Infra\obj\Debug\net9.0\refint\Infra.dll
 C:\Users\Iago\Documents\PWA\ECommerce\Infra\obj\Debug\net9.0\Infra.pdb
 C:\Users\Iago\Documents\PWA\ECommerce\Infra\obj\Debug\net9.0\ref\Infra.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\Infra.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\refint\Infra.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\Infra.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\bin\Debug\net9.0\_db\dados.db
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\bin\Debug\net9.0\Infra.deps.json
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\bin\Debug\net9.0\Infra.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\bin\Debug\net9.0\Infra.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\bin\Debug\net9.0\Model.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\bin\Debug\net9.0\Model.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\Infra.csproj.AssemblyReference.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\Infra.AssemblyInfoInputs.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\Infra.AssemblyInfo.cs
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\Infra.csproj.CoreCompileInputs.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\Infra.sourcelink.json
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\Infra.csproj.Up2Date
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\obj\Debug\net9.0\ref\Infra.dll
