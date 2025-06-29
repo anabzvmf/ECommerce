@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\backend\\Backend.csproj": {}
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\backend\\Backend.csproj": {
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\backend\\Backend.csproj",
+        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\backend\\obj\\",
+        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

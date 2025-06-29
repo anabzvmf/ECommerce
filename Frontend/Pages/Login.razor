@@ -34,7 +34,7 @@
 @code {
     [SupplyParameterFromQuery]
     [Parameter]
-    public string? RedirecionarCasoSucesso { get; set; }
+    public string? RedirecionarCasoSucesso { get; set; } = "/perfil";
 
     private string? Mensagem { get; set; }
     private string Email { get; set; } = string.Empty;
@@ -69,6 +69,7 @@
 
         if (!string.IsNullOrWhiteSpace(RedirecionarCasoSucesso))
         {
+            Console.WriteLine("OLÁ");
             Navigation.NavigateTo(RedirecionarCasoSucesso, true);
             return;
         }

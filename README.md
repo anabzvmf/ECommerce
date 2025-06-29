@@ -18,6 +18,7 @@ git clone https://github.com/anabzvmf/ECommerce
 2. Baixe as dependencias:
 
 ```bash
+cd ECommerce
 npm install
 ```
 3. Rode o projeto no terminal:
@@ -27,5 +28,5 @@ npm run dev
 ```
 4. Abra o link no seu navegador:
 ```bash
-http://localhost:5273/
+http://localhost:5280/
 ```
