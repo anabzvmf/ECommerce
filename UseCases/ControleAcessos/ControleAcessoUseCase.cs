@@ -46,24 +46,6 @@ public class ControleAcessoUseCase
         }
     }
 
-
-    public async Task<ResultadoUnico<UsuarioDTO>> ObterUsuarioPorSlug(string slug)
-    {
-        try
-        {
-            var obj = await usuarioDAO.RetornarPorSlugAsync(slug);
-
-            if (obj == null)
-                return FalhaObjeto<UsuarioDTO>([new("O usuário que você deseja não foi encontrado no sistema.")]);
-
-            return SucessoObjeto(usuarioMapper.GetDto(obj));
-        }
-        catch
-        {
-            return FalhaObjeto<UsuarioDTO>([new("Erro na tentativa de obter usuário por slug.", MensagemRetorno.EOrigem.Erro)]);
-        }
-    }
-
     public async Task<ResultadoUnico<UsuarioDTO>> LogarAsync(LoginDTO login)
     {
         try
@@ -127,18 +109,6 @@ public class ControleAcessoUseCase
         }
     }
 
-    public async Task<bool> SlugJaUtilizadoAsync(string slug, int idUsuarioAtual)
-    {
-        try
-        {
-            return await usuarioDAO.SlugJaUtilizadoAsync(slug, idUsuarioAtual);
-        }
-        catch
-        {
-            return false;
-        }
-    }
-
     #endregion
 
     #region Apenas_Logados
@@ -183,6 +153,26 @@ public class ControleAcessoUseCase
         catch
         {
             return FalhaObjeto<UsuarioDTO>([new("Erro na tentativa de obter usuário por id.", MensagemRetorno.EOrigem.Erro)]);
+        }
+    }
+
+    public async Task<ResultadoUnico<UsuarioDTO>> RegistrarUsuario(RegistrarUsuarioDTO usuario)
+    {
+        try
+        {
+            Console.WriteLine($"[RegistrarUsuario] Dados recebidos: {System.Text.Json.JsonSerializer.Serialize(usuario)}");
+            var obj = new Usuario();
+            obj.Nome = usuario.Nome;
+            obj.Email = usuario.Email;
+            obj.HashSenha = hasher.HashPassword(obj, usuario.Senha);
+            Console.WriteLine($"[RegistrarUsuario] Usuario a ser inserido: {System.Text.Json.JsonSerializer.Serialize(obj)}");
+            await usuarioDAO.InserirAsync(obj);
+            return SucessoObjeto(usuarioMapper.GetDto(obj));
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine($"[RegistrarUsuario] Erro: {ex.Message}");
+            return FalhaObjeto<UsuarioDTO>([new("Erro na tentativa de registrar novo usuário.", MensagemRetorno.EOrigem.Erro)]);
         }
     }
 

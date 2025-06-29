@@ -32,6 +32,8 @@ public abstract class BaseDAO<T> : IBaseDAO<T> where T : IModel
             " values " +
             $" (@Id{parametrosCampos})";
         
+        Console.WriteLine($"SQL gerado: {sql}");
+        Console.WriteLine($"Objeto: {System.Text.Json.JsonSerializer.Serialize(obj)}");
         await ExecutarAsync(sql, obj);
     }
 
@@ -157,5 +159,5 @@ public abstract class BaseDAO<T> : IBaseDAO<T> where T : IModel
 
     private static Snowflake snowflake = new(settings);
 
-    public static string StringConexao = $"Data Source={Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "_db", "dados.db")}";
+    public static string StringConexao = @"Data Source=C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\_db\dados.db";
 }

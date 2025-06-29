@@ -2,14 +2,17 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.JSInterop;
 
 namespace Frontend.Helpers;
 
 public static class ApiBackend
 {
+    public static IJSRuntime? JsRuntime { get; set; }
+
     static ApiBackend()
     {
-        UrlBase = "http://localhost:5124/";
+        UrlBase = "http://localhost:5273/";
     }
 
     public static async Task<T?> GetAsync<T>(string complementoUrl, string? token = null)
@@ -61,6 +64,14 @@ public static class ApiBackend
     public static async Task<T?> PostAsync<T>(string complementoUrl, T objeto, string? token = null)
     {
         var urlCompleta = UrlBase + complementoUrl;
+        Console.WriteLine($"[ApiBackend] POST para: {urlCompleta}");
+        Console.WriteLine($"[ApiBackend] Dados enviados: {System.Text.Json.JsonSerializer.Serialize(objeto)}");
+
+        if (JsRuntime != null)
+        {
+            await JsRuntime.InvokeVoidAsync("console.log", $"[ApiBackend] POST para: {urlCompleta}");
+            await JsRuntime.InvokeVoidAsync("console.log", $"[ApiBackend] Dados enviados: {System.Text.Json.JsonSerializer.Serialize(objeto)}");
+        }
 
         var httpClient = new HttpClient();
 

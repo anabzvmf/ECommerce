@@ -1,8 +1,6 @@
 ﻿@page "/registrar"
 @using DTO.ControleAcessos
 @using Helpers
-
-
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
 
@@ -20,17 +18,9 @@
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" @bind="usuario.Email" />
             </div>
-            <div class="mb-4 bg-gray">
-                <label for="slug">Slug:</label>
-                <input type="text" class="form-control" id="slug" @bind="usuario.Slug" />
-            </div>
             <div class="mb-6">
                 <label for="Senha">Senha:</label>
-                <input type="password" class="form-control" id="Senha" @bind="Senha" />
-            </div>
-            <div class="mb-4 bg-gray">
-                <label for="apresentacao">Apresentação:</label>
-                <textarea class="form-control" id="apresentacao" @bind="usuario.Apresentacao" />
+                <input type="password" class="form-control" id="Senha" @bind="usuario.Senha" />
             </div>
             @if (!string.IsNullOrEmpty(mensagem))
             {
@@ -39,7 +29,7 @@
                 </div>
             }
 
-            <button class="btn btn-primary mt-2" @onclick="CriarUsuarioAsync">Criar Usuário</button>
+            <button type="button" class="btn btn-primary mt-2" @onclick="CriarUsuarioAsync">Criar Usuário</button>
         </form>
     </div>
 </div>
@@ -49,11 +39,14 @@
     [Parameter]
     public string? RedirecionarCasoSucesso { get; set; }
 
-    private UsuarioDTO usuario = new();
-    private string? Senha;
-
+    private RegistrarUsuarioDTO usuario = new();
     private bool mensagemErro = false;
     private string? mensagem { get; set; }
+
+    protected override void OnInitialized()
+    {
+        ApiBackend.JsRuntime = JS;
+    }
 
     private async Task CriarUsuarioAsync()
     {
@@ -75,7 +68,7 @@
             return;
         }
 
-        if (string.IsNullOrEmpty(Senha))
+        if (string.IsNullOrEmpty(usuario.Senha))
         {
             mensagem = "É necessário informar a senha.";
             mensagemErro = true;
@@ -83,19 +76,11 @@
             return;
         }
 
-        usuario.Apresentacao = usuario.Apresentacao.Replace("\n", "<br />");
-        Console.WriteLine($"Apresentação: '{usuario.Apresentacao}'");
-
         try
         {
             var result = await ApiBackend.PostAsync("usuarios", usuario);
-
-            var trocarSenha = new TrocarSenhaDTO(usuario.Email, "", Senha);
-            await ApiBackend.PostAsync("usuarios/alterar-senha", trocarSenha);
-
             mensagem = $"Usuário '{result.Nome}' criado com sucesso!";
             StateHasChanged();
-
             await SetTimeout(2000, () => Navigation.NavigateTo("/autenticacao/login"));
         }
         catch (Exception ex)

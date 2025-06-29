@@ -56,7 +56,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection(); // Comentado para evitar erro de redirecionamento HTTPS em dev
 
 app.AdicionarTodosEndpoints();
 
@@ -64,5 +64,7 @@ app.UseCors(builder => builder
     .AllowAnyOrigin()
     .AllowAnyMethod()
     .AllowAnyHeader());
+
+Console.WriteLine(AppDomain.CurrentDomain.BaseDirectory);
 
 app.Run();

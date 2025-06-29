@@ -39,10 +39,6 @@ public static class AdicionarEnpointsUsuariosExtensions
             .WithSummary("Retorna o usuário que possui o id informado")
             .RequireAuthorization();
 
-        usuarios.MapGet("/slug/{slug}", ObterUsuarioPorSlug)
-            .WithName("Obter usuário por slug")
-            .WithSummary("Retorna o usuário que possui o slug informado");
-
         usuarios.MapGet("/email/{email}", ObterUsuarioPorEmail)
             .WithName("Obter usuário por e-mail")
             .WithSummary("Retorna o usuário que possui o e-mail informado");
@@ -56,14 +52,11 @@ public static class AdicionarEnpointsUsuariosExtensions
             .WithSummary("Permite alterar a senha de usuário");
     }
 
-    private static async Task<IResult> InserirUsuario(UsuarioDTO usuario, IControleAcessoUseCase controleAcessoUseCase)
+    private static async Task<IResult> InserirUsuario(RegistrarUsuarioDTO usuario, IControleAcessoUseCase controleAcessoUseCase)
     {
         try
         {
-            if (await controleAcessoUseCase.SlugJaUtilizadoAsync(usuario.Slug, 0))
-                return TypedResults.BadRequest(new MensagemRetorno[] { new($"O slug '{usuario.Slug}' já está sendo utilizado por outro usuário.") });
-
-            var resultado = await controleAcessoUseCase.InserirUsuario(usuario);
+            var resultado = await controleAcessoUseCase.RegistrarUsuario(usuario);
             return resultado.Sucesso
                 ? TypedResults.Created($"/{resultado.Objeto.Id}", resultado.Objeto)
                 : TypedResults.BadRequest(resultado.Erros);
@@ -158,29 +151,6 @@ public static class AdicionarEnpointsUsuariosExtensions
         }
     }
     
-
-    private static async Task<IResult> ObterUsuarioPorSlug(string slug, HttpContext context, IControleAcessoUseCase controleAcessoUseCase)
-    {
-        try
-        {
-            var resultado = await controleAcessoUseCase.ObterUsuarioPorSlug(slug);
-            return resultado.Sucesso
-                ? TypedResults.Ok(resultado.Objeto)
-                : TypedResults.BadRequest(resultado.Erros);
-        }
-        catch (Exception ex)
-        {
-#if DEBUG
-            var metodo = MethodBase.GetCurrentMethod();
-
-            if (metodo != null)
-                Debug.WriteLine($"Exception in {metodo.Name}: {ex.Message}");
-#endif
-
-            return TypedResults.InternalServerError();
-        }
-    }
-    
     private static async Task<IResult> AlterarUsuario(long id, UsuarioDTO usuario, HttpContext context, IControleAcessoUseCase controleAcessoUseCase)
     {
         try
@@ -189,9 +159,6 @@ public static class AdicionarEnpointsUsuariosExtensions
 
             if (id != usuario.Id)
                 return TypedResults.BadRequest("O id não confere.");
-
-            if (await controleAcessoUseCase.SlugJaUtilizadoAsync(usuario.Slug, 0))
-                return TypedResults.BadRequest(new MensagemRetorno[] { new($"O slug '{usuario.Slug}' já está sendo utilizado por outro usuário.") });
 
             var resultado = await controleAcessoUseCase.AlterarUsuario(usuario);
             return resultado.Sucesso
