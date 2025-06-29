@@ -1,5 +1,8 @@
-﻿@page "/perfil"
+@page "/perfil"
 @inject NavigationManager NavigationManager
+@inject IUsuarioService UsuarioService
+@using DTO.ControleAcessos // Importa UsuarioDTO
+@using DTO.Pedidos
 
 <div class="max-w-4xl mx-auto px-4 py-8">
     <!-- Cabeçalho -->
@@ -25,27 +28,9 @@
             <div class="flex flex-col md:flex-row gap-6">
                 <!-- Informações -->
                 <div class="flex-grow">
-                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">@Nome</h2>
-                    <p class="text-gray-600 dark:text-gray-300">@Email</p>
-                    
-                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Telefone</label>
-                            <p class="text-gray-800 dark:text-white">@Telefone</p>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Data de Nascimento</label>
-                            <p class="text-gray-800 dark:text-white">@Nascimento.ToShortDateString()</p>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">CPF</label>
-                            <p class="text-gray-800 dark:text-white">@Cpf</p>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-500 dark:text-gray-400">Endereço</label>
-                            <p class="text-gray-800 dark:text-white">@Endereco</p>
-                        </div>
-                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">@Usuario?.Nome</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">ID: @Usuario?.Id</p>
+                    <p class="text-gray-600 dark:text-gray-300">@Usuario?.Email</p>
                 </div>
             </div>
 
@@ -98,24 +83,15 @@
 </div>
 
 @code {
-    // Dados do usuário
-    private string Nome = "João da Silva";
-    private string Email = "joao.silva@email.com";
-    private string Telefone = "(11) 98765-4321";
-    private DateTime Nascimento = new DateTime(1985, 5, 15);
-    private string Cpf = "123.456.789-00";
-    private string Endereco = "Rua Exemplo, 123 - São Paulo/SP";
-
-    // Modo escuro
+    private UsuarioDTO? Usuario;
     private bool ModoEscuro { get; set; } = false;
+    private List<Pedido> Pedidos = new();
 
-    // Pedidos
-    private List<Pedido> Pedidos = new()
+    protected override async Task OnInitializedAsync()
     {
-        new Pedido("#1001", DateTime.Now.AddDays(-5), 499.90m, "Entregue"),
-        new Pedido("#1002", DateTime.Now.AddDays(-2), 129.90m, "Em transporte"),
-        new Pedido("#1003", DateTime.Now.AddDays(-1), 89.90m, "Processando")
-    };
+        Usuario = await UsuarioService.ObterUsuarioLogadoAsync();
+        Pedidos = await UsuarioService.ObterPedidosUsuarioAsync();
+    }
 
     private void Logout()
     {
@@ -123,19 +99,4 @@
         NavigationManager.NavigateTo("/", forceLoad: true);
     }
 
-    private class Pedido
-    {
-        public string Numero { get; set; }
-        public DateTime Data { get; set; }
-        public decimal Valor { get; set; }
-        public string Status { get; set; }
-
-        public Pedido(string numero, DateTime data, decimal valor, string status)
-        {
-            Numero = numero;
-            Data = data;
-            Valor = valor;
-            Status = status;
-        }
-    }
 }
