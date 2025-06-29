@@ -1,0 +1,126 @@
+@page "/produtos/lista_produtos"
+@using DTO.Produtos
+@using Helpers
+@inject IJSRuntime JS
+@inject NavigationManager Navigation
+
+<div class="container mx-auto p-4">
+    <h2 class="text-3xl font-bold text-center text-blue-600 mb-6">
+        Produtos Cadastrados
+    </h2>
+
+    @if (produtos == null)
+    {
+        <div class="text-center">Carregando produtos...</div>
+    }
+    else if (!produtos.Any())
+    {
+        <div class="text-center">Nenhum produto encontrado.</div>
+    }
+    else
+    {
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            @foreach (var produto in produtos)
+            {
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="@produto.ImagemUrl" alt="@produto.Nome" class="w-full h-48 object-cover rounded-md mb-4" />
+                    <h3 class="text-xl font-semibold text-blue-600">@produto.Nome</h3>
+                    <p class="text-gray-700">@produto.Descricao</p>
+                    <p class="mt-2 text-lg font-bold text-blue-500">R$ @produto.Preco</p>
+                    <p class="mt-2 text-sm text-gray-500">Estoque: @produto.Estoque</p>
+                    <p class="mt-2 text-sm text-gray-500">Categoria: @produto.CategoriaId</p>
+
+                    <div class="mt-4 flex justify-between items-center">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" @onclick="() => EditarProduto(produto.Id)">
+                            Editar
+                        </button>
+                        @* <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700" @onclick="() => DeletarProduto(produto.Id)">
+                            Deletar
+                        </button> *@
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Se quiser adicionar paginação -->
+        <div class="mt-6 text-center">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" @onclick="CarregarMaisProdutos">
+                Carregar Mais
+            </button>
+        </div>
+    }
+</div>
+
+@code {
+    private List<ProdutoDTO> produtos;
+    private bool carregando = false;
+    private int paginaAtual = 1;
+    private const int TamanhoPagina = 10;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CarregarProdutos();
+    }
+
+    private async Task CarregarProdutos()
+    {
+        if (carregando) return;
+
+        carregando = true;
+        try
+        {
+            var response = await ApiBackend.GetAsync<List<ProdutoDTO>>($"produtos?page={paginaAtual}&size={TamanhoPagina}");
+            if (response != null && response.Any())
+            {
+                if (produtos == null)
+                    produtos = new List<ProdutoDTO>();
+
+                produtos.AddRange(response);
+                paginaAtual++;
+            }
+        }
+        catch (Exception ex)
+        {
+            // Trate erros de forma adequada aqui
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            carregando = false;
+            StateHasChanged();
+        }
+    }
+
+    private void EditarProduto(long produtoId)
+    {
+        // Lógica para redirecionar para a página de edição do produto
+        Navigation.NavigateTo($"/editar-produto/{produtoId}");
+    }
+
+    @* private async Task DeletarProduto(long produtoId)
+    {
+        var confirm = await JS.InvokeAsync<bool>("confirm", "Tem certeza que deseja excluir este produto?");
+        if (confirm)
+        {
+            try
+            {
+                var response = await ApiBackend.DeleteAsync($"produtos/{produtoId}");
+                if (response)
+                {
+                    produtos.RemoveAll(p => p.Id == produtoId);
+                    StateHasChanged();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Trate erros de exclusão aqui
+                Console.WriteLine(ex.Message);
+            }
+        }
+    } *@
+
+    private async Task CarregarMaisProdutos()
+    {
+        await CarregarProdutos();
+    }
+}

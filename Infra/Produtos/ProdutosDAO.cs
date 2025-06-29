@@ -3,7 +3,7 @@ using Model.Produtos;
 namespace Infra.Produtos;
 public class PostagemDAO : BaseDAO<Produto>, IProdutoDAO
 {
-    protected override string NomeTabela => "postagem";
+    protected override string NomeTabela => "produto";
 
     public async Task Ocultar(long id)
     {
