@@ -182,25 +182,39 @@ public static class AdicionarEnpointsUsuariosExtensions
     {
         try
         {
-            var resultado = await controleAcessoUseCase.LogarAsync(login);
+            Console.WriteLine($"[Login] Recebendo login para: {login.Email}");
 
+            var resultado = await controleAcessoUseCase.LogarAsync(login);
+            
             if (!resultado.Sucesso)
+            {
+                Console.WriteLine("[Login] Falha no login: credenciais inválidas");
                 return TypedResults.Unauthorized();
+            }
+
+            var token = new TokenService().Gerar(resultado.Objeto);
+            Console.WriteLine($"[Login] Login bem-sucedido para: {login.Email}, Token gerado.");
 
             return TypedResults.Ok(new TokenService().Gerar(resultado.Objeto));
         }
         catch (Exception ex)
         {
-#if DEBUG
-            var metodo = MethodBase.GetCurrentMethod();
-
-            if (metodo != null)
-                Debug.WriteLine($"Exception in {metodo.Name}: {ex.Message}");
-#endif
-
+            Console.WriteLine($"[Login] ERRO ao tentar login para {login.Email}:\n {ex.Message}");
+            // Console.WriteLine(ex.StackTrace);
             return TypedResults.InternalServerError();
         }
     }
+//         {
+// #if DEBUG
+//             var metodo = MethodBase.GetCurrentMethod();
+
+        //             if (metodo != null)
+        //                 Debug.WriteLine($"Exception in {metodo.Name}: {ex.Message}");
+        // #endif
+
+        //             return TypedResults.InternalServerError();
+        //         }
+        //     }
 
     private static async Task<IResult> AlterarSenha(TrocarSenhaDTO trocarSenha, IControleAcessoUseCase controleAcessoUseCase)
     {

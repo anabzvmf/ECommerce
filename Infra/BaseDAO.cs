@@ -31,7 +31,7 @@ public abstract class BaseDAO<T> : IBaseDAO<T> where T : IModel
             $" (id{nomesCampos})" +
             " values " +
             $" (@Id{parametrosCampos})";
-        
+
         Console.WriteLine($"SQL gerado: {sql}");
         Console.WriteLine($"Objeto: {System.Text.Json.JsonSerializer.Serialize(obj)}");
         await ExecutarAsync(sql, obj);
@@ -72,7 +72,7 @@ public abstract class BaseDAO<T> : IBaseDAO<T> where T : IModel
         foreach (var nomeProp in GetPropriedades(typeof(T)))
             campos += $", {nomeProp.ToLower()} as {nomeProp}";
 
-        string sql = $"SELECT id as Id{campos}" + 
+        string sql = $"SELECT id as Id{campos}" +
             $" FROM {NomeTabela}" +
             " WHERE id = @id";
 
@@ -86,7 +86,7 @@ public abstract class BaseDAO<T> : IBaseDAO<T> where T : IModel
         await conexao.OpenAsync();
 
         await conexao.ExecuteAsync(sql, obj);
-        
+
         await conexao.CloseAsync();
     }
 
@@ -159,5 +159,19 @@ public abstract class BaseDAO<T> : IBaseDAO<T> where T : IModel
 
     private static Snowflake snowflake = new(settings);
 
-    public static string StringConexao = @"Data Source=C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\_db\dados.db";
+    //Fazendo com absolute path
+    // public static string StringConexao = @"Data Source=C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Infra\_db\dados.db";
+
+
+    //Fazendo com path dinâmico
+    public static string StringConexao
+    {
+        get
+        {
+            var solutionDir = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\..\.."));
+            var dbPath = Path.Combine(solutionDir, "Infra", "_db", "dados.db");
+            return $"Data Source={dbPath}";
+        }
+    }
+
 }

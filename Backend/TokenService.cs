@@ -1,8 +1,9 @@
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Security.Claims;
 using DTO.ControleAcessos;
+using Backend;
 
 namespace Backend;
 

@@ -8,7 +8,9 @@ public class Config
     {
         var caminho = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.secrets.json");
         if (File.Exists(caminho))
+        {
             instancia = JsonSerializer.Deserialize<Config>(File.ReadAllText(caminho));
+        }
         else
             throw new Exception("Configuração da chave privada inexistente");
     }

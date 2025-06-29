@@ -16,24 +16,57 @@ public static class ApiBackend
     }
 
     public static async Task<T?> GetAsync<T>(string complementoUrl, string? token = null)
+{
+    var urlCompleta = UrlBase + complementoUrl;
+    Console.WriteLine($"[ApiBackend] Iniciando GET para: {urlCompleta}");
+
+    using var httpClient = new HttpClient();
+
+    if (token != null)
     {
-        var urlCompleta = UrlBase + complementoUrl;
-
-        var httpClient = new HttpClient();
-
-        if (token != null)
-            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
-
-        var result = await httpClient.GetStringAsync(urlCompleta);
-
-        httpClient.Dispose();
-
-        return JsonSerializer.Deserialize<T>(result, Options);
+        Console.WriteLine("[ApiBackend] Token fornecido, adicionando header Authorization.");
+        httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
     }
+    else
+    {
+        Console.WriteLine("[ApiBackend] Nenhum token fornecido.");
+    }
+
+    try
+    {
+        Console.WriteLine("[ApiBackend] Enviando requisição GET...");
+        var resultado = await httpClient.GetAsync(urlCompleta);
+
+        Console.WriteLine($"[ApiBackend] Código de status da resposta: {resultado.StatusCode}");
+
+        if (!resultado.IsSuccessStatusCode)
+        {
+            var conteudoErro = await resultado.Content.ReadAsStringAsync();
+            Console.WriteLine($"[ApiBackend] Erro na chamada da API: {resultado.StatusCode}, Conteúdo: {conteudoErro}");
+            throw new Exception($"Erro ao chamar a API: {resultado.StatusCode} - {conteudoErro}");
+        }
+
+        var result = await resultado.Content.ReadAsStringAsync();
+        Console.WriteLine($"[ApiBackend] Resposta recebida: {result}");
+
+        var objetoDesserializado = JsonSerializer.Deserialize<T>(result, Options);
+        Console.WriteLine("[ApiBackend] Desserialização concluída com sucesso.");
+
+        return objetoDesserializado;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"[ApiBackend] Exceção ao chamar GET: {ex.Message}");
+        throw;
+    }
+}
+
 
     public static async Task<T?> PostAsync<T, K>(string complementoUrl, K objeto, string? token = null)
     {
         var urlCompleta = UrlBase + complementoUrl;
+        Console.WriteLine($"[ApiBackend] POST para: {urlCompleta}");
+        Console.WriteLine($"[ApiBackend] Corpo enviado: {JsonSerializer.Serialize(objeto)}");
 
         var httpClient = new HttpClient();
 
@@ -48,10 +81,17 @@ public static class ApiBackend
 
         var result = await httpClient.PostAsync(urlCompleta, conteudo);
 
+        Console.WriteLine($"[ApiBackend] Status da resposta: {result.StatusCode}");
+
         if (!result.IsSuccessStatusCode)
+        {
+            var errorContent = await result.Content.ReadAsStringAsync();
+            Console.WriteLine($"[ApiBackend] Erro ao chamar a API: {result.StatusCode} - {errorContent}");
             throw new Exception($"Erro ao chamar a API: {result.StatusCode}");
+        }
 
         var resultContent = await result.Content.ReadAsStringAsync();
+        Console.WriteLine($"[ApiBackend] Conteúdo da resposta: {resultContent}");
 
         httpClient.Dispose();
 

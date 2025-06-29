@@ -1,26 +1,3 @@
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\_db\dados.db
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\UseCases.deps.json
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\UseCases.dll
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\UseCases.pdb
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\DTO.dll
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Infra.dll
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Mappers.dll
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Model.dll
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Model.pdb
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Mappers.pdb
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\DTO.pdb
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Infra.pdb
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.csproj.AssemblyReference.cache
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.AssemblyInfoInputs.cache
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.AssemblyInfo.cs
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.csproj.CoreCompileInputs.cache
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.sourcelink.json
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.csproj.Up2Date
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.dll
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\refint\UseCases.dll
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.pdb
-C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\ref\UseCases.dll
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\UseCases\obj\Debug\net9.0\UseCases.dll
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\UseCases\obj\Debug\net9.0\refint\UseCases.dll
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\UseCases\obj\Debug\net9.0\UseCases.pdb
@@ -44,3 +21,26 @@ C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\UseCases\bin\Debug\net9.0\DT
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\UseCases\bin\Debug\net9.0\Infra.pdb
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\UseCases\obj\Debug\net9.0\UseCases.csproj.Up2Date
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\UseCases\obj\Debug\net9.0\ref\UseCases.dll
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\_db\dados.db
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\UseCases.deps.json
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\UseCases.dll
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\UseCases.pdb
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\DTO.dll
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Infra.dll
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Mappers.dll
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Model.dll
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Model.pdb
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Mappers.pdb
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\DTO.pdb
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\bin\Debug\net9.0\Infra.pdb
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.csproj.AssemblyReference.cache
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.AssemblyInfoInputs.cache
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.AssemblyInfo.cs
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.csproj.CoreCompileInputs.cache
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.sourcelink.json
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.csproj.Up2Date
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.dll
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\refint\UseCases.dll
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\UseCases.pdb
+C:\Users\Iago\Documents\PWA\ECommerce\UseCases\obj\Debug\net9.0\ref\UseCases.dll

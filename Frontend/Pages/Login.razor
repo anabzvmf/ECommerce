@@ -1,4 +1,9 @@
 ﻿@page "/login"
+@using DTO.ControleAcessos
+@using Helpers
+@using System.Text.Json
+@inject IJSRuntime JS
+@inject NavigationManager Navigation
 
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-sm">
@@ -7,15 +12,15 @@
         <form>
             <div class="mb-4 bg-gray">
                 <label class="block text-gray-700 mb-2" for="email">Email</label>
-                <input id="email" type="text" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100" />
+                <input id="email" type="text" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100" @bind="Email"/>
             </div>
 
             <div class="mb-6">
                 <label class="block text-gray-700 mb-2" for="password">Senha</label>
-                <input id="password" type="password" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100" />
+                <input id="password" type="password" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100" @bind="Senha"/>
             </div>
 
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" @onclick(Logar)>
+            <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" @onclick="EfetuarLogin">
                 Entrar
             </button>
         </form>
@@ -26,6 +31,88 @@
     </div>
 </div>
 
-@code{
-    
+@code {
+    [SupplyParameterFromQuery]
+    [Parameter]
+    public string? RedirecionarCasoSucesso { get; set; }
+
+    private string? Mensagem { get; set; }
+    private string Email { get; set; } = string.Empty;
+    private string Senha { get; set; } = string.Empty;
+
+    private async Task EfetuarLogin()
+    {
+        if (string.IsNullOrEmpty(Email))
+        {
+            Mensagem = "È necessário informar o email.";
+            this.StateHasChanged();
+            return;
+        }
+
+        if (string.IsNullOrEmpty(Senha))
+        {
+            Mensagem = "È necessário informar a senha.";
+            this.StateHasChanged();
+            return;
+        }
+
+        try
+        {
+            await EfetuarLoginAsync();
+        }
+        catch (Exception ex)
+        {
+            Mensagem = ex.Message;
+            this.StateHasChanged();
+            return;
+        }
+
+        if (!string.IsNullOrWhiteSpace(RedirecionarCasoSucesso))
+        {
+            Navigation.NavigateTo(RedirecionarCasoSucesso, true);
+            return;
+        }
+
+        Navigation.NavigateTo("/", true);
+    }
+
+    public async Task EfetuarLoginAsync()
+    {
+        var login = new LoginDTO
+        {
+            Email = Email,
+            Senha = Senha
+        };
+        Console.WriteLine($"[Login] Iniciando login para: {Email}");
+
+        var token = await JS.InvokeAsync<string>("localStorage.getItem", "token");
+
+        if (!string.IsNullOrEmpty(token)){
+            Console.WriteLine("[Login] Token antigo encontrado, removendo...");
+
+            await JS.InvokeVoidAsync("localStorage.removeItem", "token");
+        }
+        
+        Console.WriteLine("[Login] Enviando dados de login para API...");
+
+        token = await ApiBackend.PostAsync<string, LoginDTO>("usuarios/login", new LoginDTO
+        {
+            Email = Email,
+            Senha = Senha
+        });
+
+        Console.WriteLine($"[Login] Token recebido: {token}");
+
+        if (string.IsNullOrEmpty(token))
+            throw new Exception("Não foi possível efetuar o login.");
+
+        Console.WriteLine($"[Login] Buscando dados do usuário por email: {Email}");
+
+        var usuario = await ApiBackend.GetAsync<UsuarioDTO>($"usuarios/email/{Email}");
+
+        await JS.InvokeVoidAsync("localStorage.setItem", "user", JsonSerializer.Serialize(usuario));
+        await JS.InvokeVoidAsync("localStorage.setItem", "token", token);
+
+        Console.WriteLine("[Login] Login finalizado com sucesso!");
+    }
 }
