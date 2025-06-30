@@ -1,6 +1,7 @@
 @page "/perfil"
 @inject NavigationManager NavigationManager
 @inject IUsuarioService UsuarioService
+@inject IJSRuntime JS
 @using DTO.ControleAcessos 
 @using DTO.Pedidos
 @using UseCases.ControleAcessos
@@ -95,8 +96,9 @@
 
     private void Logout()
     {
-        // Lógica de logout (limpar token, etc.)
-        NavigationManager.NavigateTo("/", forceLoad: true);
+        JS.InvokeVoidAsync("localStorage.removeItem", "token");
+        JS.InvokeVoidAsync("localStorage.removeItem", "user");
+        NavigationManager.NavigateTo("/login", true);
     }
 
 }

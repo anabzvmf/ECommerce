@@ -72,6 +72,14 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/>
                         </svg>
                     </a>
+
+                    @if(usuarioLogado && emailusuario == "admin"){
+                        <a href="/produtos" class="p-2 hover:bg-blue-500 rounded-full transition-colors" title="Produtos">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/>
+                            </svg>
+                        </a>
+                    }
                     
                     <!-- Botão para a página de Carrinho -->
                     <a href="/compras" class="p-2 hover:bg-blue-500 rounded-full transition-colors" title="Carrinho">
@@ -81,7 +89,7 @@
                     </a>
                     <!--Logout -->
                     @if(usuarioLogado){
-                        <a @onclick="Logout" class="p-2 hover:bg-blue-500 rounded-full transition-colors">
+                    <a @onclick="Logout" class="p-2 hover:bg-blue-500 rounded-full transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
                             </svg>
@@ -109,11 +117,18 @@
         if (Navigation.Uri.Contains("/login"))
             return;
 
-        var token = await JS.InvokeAsync<string>("localStorage.getItem", "token");
-        usuarioLogado = !string.IsNullOrWhiteSpace(token);
-
-        var usuario = JsonSerializer.Deserialize<UsuarioDTO?>(await JS.InvokeAsync<string>("localStorage.getItem", "user"));
-        nomeUsuario = usuario?.Nome ?? string.Empty;
+        var userJson = await JS.InvokeAsync<string>("localStorage.getItem", "user");
+        usuarioLogado = !string.IsNullOrWhiteSpace(userJson);
+        if (usuarioLogado)
+        {
+            var usuario = JsonSerializer.Deserialize<UsuarioDTO?>(userJson);
+            nomeUsuario = usuario?.Nome ?? string.Empty;
+            emailusuario = usuario?.Email ?? string.Empty;
+        }
+        else
+        {
+            nomeUsuario = string.Empty;
+        }
     }
     private bool isOpen = false;
 
@@ -131,5 +146,6 @@
         JS.InvokeVoidAsync("eval", "window.location.reload();");
     }
     private string nomeUsuario = string.Empty;
+    private string emailusuario = string.Empty;
     private bool usuarioLogado = false;
 }
