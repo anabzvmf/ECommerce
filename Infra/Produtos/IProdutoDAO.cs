@@ -7,4 +7,5 @@ public interface IProdutoDAO : IBaseDAO<Produto>
 {
     Task<IEnumerable<Produto>> RetornarComPaginacaoDescendenteAsync(long idProduto, long? ultimoIdConsultado, int numeroRegsASeremRetornados = 100);
     Task Ocultar(long id);
+     Task<List<Produto>> ObterProdutosAsync(string complementoUrl);
 }

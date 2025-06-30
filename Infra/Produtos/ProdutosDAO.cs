@@ -1,6 +1,8 @@
 using Model.Produtos;
+using DTO.Produtos;
 
 namespace Infra.Produtos;
+
 public class ProdutosDAO : BaseDAO<Produto>, IProdutoDAO
 {
     protected override string NomeTabela => "produto";
@@ -31,4 +33,24 @@ public class ProdutosDAO : BaseDAO<Produto>, IProdutoDAO
 
         return await SelecionarAsync(sql, new { IdAutor = idAutor, Id = ultimoIdConsultado });
     }
+    public async Task<List<Produto>> ObterProdutosAsync(string complementoUrl)
+    {
+        string sql = "SELECT * FROM produto";
+
+        var result = await SelecionarAsync<Produto>(sql);
+
+        var produto = result.Select(p => new Produto
+        {
+            Id = p.Id,
+            Nome = p.Nome,
+            Descricao = p.Descricao,
+            Preco = p.Preco,
+            Estoque = p.Estoque,
+            ImagemUrl = p.ImagemUrl,
+            DataCadastro = p.DataCadastro
+        }).ToList();
+
+        return produto;
+    }
+
 }

@@ -30,7 +30,7 @@
                     <p class="mt-2 text-sm text-gray-500">Estoque: @produto.Estoque</p>
 
                     <div class="mt-4 flex justify-between items-center">
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" @onclick="() => EditarProduto(produto.Id)">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" >
                             Editar
                         </button>
                         @* <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700" @onclick="() => DeletarProduto(produto.Id)">
@@ -68,7 +68,7 @@
         carregando = true;
         try
         {
-            var response = await ApiBackend.GetAsync<List<ProdutoDTO>>($"produtos?page={paginaAtual}&size={TamanhoPagina}");
+            var response = await ApiBackend.GetAsync<List<ProdutoDTO>>("produtos");
             if (response != null && response.Any())
             {
                 if (produtos == null)
@@ -90,33 +90,6 @@
         }
     }
 
-    private void EditarProduto(long produtoId)
-    {
-        // Lógica para redirecionar para a página de edição do produto
-        Navigation.NavigateTo($"/editar-produto/{produtoId}");
-    }
-
-    @* private async Task DeletarProduto(long produtoId)
-    {
-        var confirm = await JS.InvokeAsync<bool>("confirm", "Tem certeza que deseja excluir este produto?");
-        if (confirm)
-        {
-            try
-            {
-                var response = await ApiBackend.DeleteAsync($"produtos/{produtoId}");
-                if (response)
-                {
-                    produtos.RemoveAll(p => p.Id == produtoId);
-                    StateHasChanged();
-                }
-            }
-            catch (Exception ex)
-            {
-                // Trate erros de exclusão aqui
-                Console.WriteLine(ex.Message);
-            }
-        }
-    } *@
 
     private async Task CarregarMaisProdutos()
     {

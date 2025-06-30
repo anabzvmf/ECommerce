@@ -610,6 +610,7 @@
       },
       "Infra/1.0.0": {
         "dependencies": {
+          "DTO": "1.0.0",
           "Dapper": "2.1.66",
           "Microsoft.AspNetCore.Identity": "2.3.1",
           "Microsoft.Data.Sqlite": "9.0.5",

@@ -1198,6 +1198,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "DTO": "1.0.0",
           "Dapper": "2.1.66",
           "Microsoft.AspNetCore.Identity": "2.3.1",
           "Microsoft.Data.Sqlite": "9.0.5",
@@ -2328,6 +2329,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "DTO": "1.0.0",
           "Dapper": "2.1.66",
           "Microsoft.AspNetCore.Identity": "2.3.1",
           "Microsoft.Data.Sqlite": "9.0.5",
@@ -4186,11 +4188,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\Frontend.csproj",
+      "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\Frontend.csproj",
       "projectName": "Frontend",
-      "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\Frontend.csproj",
+      "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\Frontend.csproj",
       "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\obj\\",
+      "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

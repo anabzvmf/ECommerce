@@ -101,6 +101,17 @@ public abstract class BaseDAO<T> : IBaseDAO<T> where T : IModel
 
         return await conexao.QueryAsync<T>(sql, obj);
     }
+    protected async Task<List<K>> SelecionarAsync<K>(string sql, object? obj = null)
+    {
+        using var conexao = new SqliteConnection(StringConexao);
+
+        await conexao.OpenAsync();
+
+        if (obj == null)
+            return (await conexao.QueryAsync<K>(sql)).ToList();
+
+        return (await conexao.QueryAsync<K>(sql, obj)).ToList();
+    }
 
     protected async Task<T?> SelecionarUnicoAsync(string sql, object? obj = null)
     {

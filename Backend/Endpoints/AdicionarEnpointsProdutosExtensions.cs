@@ -22,9 +22,9 @@ public static class AdicionarEnpointsProdutosExtensions
             .WithDescription("Endpoints relacionados a produtos");
 
 
-        // produtos.MapGet("/", RetornarProdutos)
-        //     .WithName("Retornar Produtos")
-        //     .WithSummary("Retorna todos os produtos");
+        produtos.MapGet("/", RetornarProdutos)
+            .WithName("Retornar Produtos")
+           .WithSummary("Retorna todos os produtos");
 
 
         produtos.MapPost("/", InserirProdutos)
@@ -54,7 +54,7 @@ public static class AdicionarEnpointsProdutosExtensions
                 Estoque = produto.Estoque
             };
 
-        
+
             var resultado = await produtoService.InserirProduto(produtoDTO);
 
             return resultado.Sucesso
@@ -71,4 +71,28 @@ public static class AdicionarEnpointsProdutosExtensions
             return TypedResults.Problem("Internal server error");
         }
     }
+    private static async Task<IResult> RetornarProdutos([FromServices] IProdutoUseCase produtoService)
+    {
+        try
+        {
+            var produtos = await produtoService.ObterProdutosAsync("");
+
+            if (produtos == null || !produtos.Any())
+            {
+                return TypedResults.NotFound("Nenhum produto encontrado.");
+            }
+
+            return TypedResults.Ok(produtos);
+        }
+        catch (Exception ex)
+        {
+    #if DEBUG
+            var metodo = MethodBase.GetCurrentMethod();
+            if (metodo != null)
+                Debug.WriteLine($"Exception in {metodo.Name}: {ex.Message}");
+    #endif
+            return TypedResults.Problem("Erro interno do servidor");
+        }
+    }
+  
 }

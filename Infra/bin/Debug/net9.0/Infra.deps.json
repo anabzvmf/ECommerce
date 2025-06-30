@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "Infra/1.0.0": {
         "dependencies": {
+          "DTO": "1.0.0",
           "Dapper": "2.1.66",
           "Microsoft.AspNetCore.Identity": "2.3.1",
           "Microsoft.Data.Sqlite": "9.0.5",
@@ -601,6 +602,14 @@
       },
       "System.Security.Principal.Windows/5.0.0": {},
       "System.Text.Encodings.Web/8.0.0": {},
+      "DTO/1.0.0": {
+        "runtime": {
+          "DTO.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Model/1.0.0": {
         "runtime": {
           "Model.dll": {
@@ -952,6 +961,11 @@
       "sha512": "sha512-yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ==",
       "path": "system.text.encodings.web/8.0.0",
       "hashPath": "system.text.encodings.web.8.0.0.nupkg.sha512"
+    },
+    "DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Model/1.0.0": {
       "type": "project",

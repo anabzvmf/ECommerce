@@ -37,16 +37,32 @@ namespace UseCases.Produtos
                 Console.WriteLine($"[RegistrarProduto Usecase] Produto a ser inserido: {System.Text.Json.JsonSerializer.Serialize(produto)}");
 
                 // Chamada assíncrona para inserir o produto
-                await produtoDAO.InserirAsync(produto); 
+                await produtoDAO.InserirAsync(produto);
 
                 return SucessoObjeto(produtoMapper.GetDto(produto));
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"[RegistrarProduto] Erro: {ex.Message}");
-                
+
                 return FalhaObjeto<ProdutoDTO>([new("Erro na tentativa de obter usuário por e-mail.", MensagemRetorno.EOrigem.Erro)]);
             }
+        }
+        public async Task<List<ProdutoDTO>> ObterProdutosAsync(string complementoUrl)
+        {
+            try
+            {
+                var produtos = await produtoDAO.ObterProdutosAsync(complementoUrl);
+                var produtosDTO = produtos.Select(p => produtoMapper.GetDto(p)).ToList();
+
+                return produtosDTO;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao obter produtos: {ex.Message}");
+                return new List<ProdutoDTO>();
+            }
+
         }
     }
 }

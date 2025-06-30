@@ -3,6 +3,8 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.JSInterop;
+using DTO.Produtos;
+using System.Net.Http.Json;
 
 namespace Frontend.Helpers;
 
@@ -16,50 +18,50 @@ public static class ApiBackend
     }
 
     public static async Task<T?> GetAsync<T>(string complementoUrl, string? token = null)
-{
-    var urlCompleta = UrlBase + complementoUrl;
-    Console.WriteLine($"[ApiBackend] Iniciando GET para: {urlCompleta}");
-
-    using var httpClient = new HttpClient();
-
-    if (token != null)
     {
-        Console.WriteLine("[ApiBackend] Token fornecido, adicionando header Authorization.");
-        httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
-    }
-    else
-    {
-        Console.WriteLine("[ApiBackend] Nenhum token fornecido.");
-    }
+        var urlCompleta = UrlBase + complementoUrl;
+        Console.WriteLine($"[ApiBackend] Iniciando GET para: {urlCompleta}");
 
-    try
-    {
-        Console.WriteLine("[ApiBackend] Enviando requisição GET...");
-        var resultado = await httpClient.GetAsync(urlCompleta);
+        using var httpClient = new HttpClient();
 
-        Console.WriteLine($"[ApiBackend] Código de status da resposta: {resultado.StatusCode}");
-
-        if (!resultado.IsSuccessStatusCode)
+        if (token != null)
         {
-            var conteudoErro = await resultado.Content.ReadAsStringAsync();
-            Console.WriteLine($"[ApiBackend] Erro na chamada da API: {resultado.StatusCode}, Conteúdo: {conteudoErro}");
-            throw new Exception($"Erro ao chamar a API: {resultado.StatusCode} - {conteudoErro}");
+            Console.WriteLine("[ApiBackend] Token fornecido, adicionando header Authorization.");
+            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+        }
+        else
+        {
+            Console.WriteLine("[ApiBackend] Nenhum token fornecido.");
         }
 
-        var result = await resultado.Content.ReadAsStringAsync();
-        Console.WriteLine($"[ApiBackend] Resposta recebida: {result}");
+        try
+        {
+            Console.WriteLine("[ApiBackend] Enviando requisição GET...");
+            var resultado = await httpClient.GetAsync(urlCompleta);
 
-        var objetoDesserializado = JsonSerializer.Deserialize<T>(result, Options);
-        Console.WriteLine("[ApiBackend] Desserialização concluída com sucesso.");
+            Console.WriteLine($"[ApiBackend] Código de status da resposta: {resultado.StatusCode}");
 
-        return objetoDesserializado;
+            if (!resultado.IsSuccessStatusCode)
+            {
+                var conteudoErro = await resultado.Content.ReadAsStringAsync();
+                Console.WriteLine($"[ApiBackend] Erro na chamada da API: {resultado.StatusCode}, Conteúdo: {conteudoErro}");
+                throw new Exception($"Erro ao chamar a API: {resultado.StatusCode} - {conteudoErro}");
+            }
+
+            var result = await resultado.Content.ReadAsStringAsync();
+            Console.WriteLine($"[ApiBackend] Resposta recebida: {result}");
+
+            var objetoDesserializado = JsonSerializer.Deserialize<T>(result, Options);
+            Console.WriteLine("[ApiBackend] Desserialização concluída com sucesso.");
+
+            return objetoDesserializado;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[ApiBackend] Exceção ao chamar GET: {ex.Message}");
+            throw;
+        }
     }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"[ApiBackend] Exceção ao chamar GET: {ex.Message}");
-        throw;
-    }
-}
 
 
     public static async Task<T?> PostAsync<T, K>(string complementoUrl, K objeto, string? token = null)
@@ -183,6 +185,19 @@ public static class ApiBackend
     {
         PropertyNameCaseInsensitive = true
     };
+
+    private static async Task<List<ProdutoDTO>> ObterProdutosAsync(string complementoUrl)
+    {
+        var urlCompleta = UrlBase + complementoUrl;
+        var httpClient = new HttpClient();
+
+        var result = await httpClient.GetFromJsonAsync<List<ProdutoDTO>>(urlCompleta);
+
+        if (result == null)
+            return new List<ProdutoDTO>();
+
+        return result;
+    }
 
     private static string UrlBase { get; set; } = null!;
 }

@@ -32,3 +32,5 @@ C:\Users\Iago\Documents\PWA\ECommerce\Infra\obj\Debug\net9.0\Infra.dll
 C:\Users\Iago\Documents\PWA\ECommerce\Infra\obj\Debug\net9.0\refint\Infra.dll
 C:\Users\Iago\Documents\PWA\ECommerce\Infra\obj\Debug\net9.0\Infra.pdb
 C:\Users\Iago\Documents\PWA\ECommerce\Infra\obj\Debug\net9.0\ref\Infra.dll
+C:\Users\Iago\Documents\PWA\ECommerce\Infra\bin\Debug\net9.0\DTO.dll
+C:\Users\Iago\Documents\PWA\ECommerce\Infra\bin\Debug\net9.0\DTO.pdb
