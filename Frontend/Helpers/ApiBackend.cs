@@ -200,4 +200,9 @@ public static class ApiBackend
     }
 
     private static string UrlBase { get; set; } = null!;
+
+    public static async Task AdicionarAoCarrinho(long produtoId, int quantidade = 1)
+    {
+        await PostAsync<object, object>("carrinho/adicionar", new { ProdutoId = produtoId, Quantidade = quantidade });
+    }
 }

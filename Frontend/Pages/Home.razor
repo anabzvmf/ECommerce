@@ -1,5 +1,7 @@
 ﻿@page "/"
 @using Frontend.Componentes
+@using DTO.Produtos
+@using Helpers
 
 <div class="max-w-7xl mx-auto">
     <!-- Hero Section -->
@@ -9,13 +11,100 @@
     </section>
 
     <!-- Destaques -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+    @* <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         <ProductCard Title="Notebook Gamer" Price="R$ 4.999" Image="img/computador.png" />
         <ProductCard Title="Smartphone" Price="R$ 2.399" Image="img/celular.png" />
         <ProductCard Title="IPad" Price="R$ 3.399" Image="img/ipad.png" />
-    </div>
+    </div> *@
+
+    @if (produtos == null)
+    {
+        <div class="text-center">Carregando produtos...</div>
+    }
+    else if (!produtos.Any())
+    {
+        <div class="text-center">Nenhum produto encontrado.</div>
+    }
+    else
+    {
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            @foreach (var produto in produtos)
+            {
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="@produto.ImagemUrl" alt="@produto.Nome" class="w-full h-48 object-cover rounded-md mb-4" />
+                    <h3 class="text-xl font-semibold text-blue-600">@produto.Nome</h3>
+                    <p class="text-gray-700">@produto.Descricao</p>
+                    <p class="mt-2 text-lg font-bold text-blue-500">R$ @produto.Preco</p>
+                    <p class="mt-2 text-sm text-gray-500">Estoque: @produto.Estoque</p>
+
+                    
+                    <div class="mt-4 flex justify-between items-center">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" @onclick="() => AdicionarProdutoAoCarrinho(produto.Id)">
+                            Carrinho
+                        </button>
+                    </div>
+
+                    <div class="mt-4 flex justify-between items-center">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" >
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
 </div>
 
 @code {
+    private List<ProdutoDTO> produtos;
+    private bool carregando = false;
+    private int paginaAtual = 1;
+    private const int TamanhoPagina = 10;
 
+    protected override async Task OnInitializedAsync()
+    {
+        await CarregarProdutos();
+    }
+
+    private async Task CarregarProdutos()
+    {
+        if (carregando) return;
+
+        carregando = true;
+        try
+        {
+            var response = await ApiBackend.GetAsync<List<ProdutoDTO>>("produtos");
+            if (response != null && response.Any())
+            {
+                if (produtos == null)
+                    produtos = new List<ProdutoDTO>();
+
+                produtos.AddRange(response);
+                paginaAtual++;
+            }
+        }
+        catch (Exception ex)
+        {
+            // Trate erros de forma adequada aqui
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            carregando = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task AdicionarProdutoAoCarrinho(long produtoId)
+    {
+        try
+        {
+            await ApiBackend.AdicionarAoCarrinho(produtoId, 1);
+            // Exiba uma mensagem de sucesso se desejar
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao adicionar ao carrinho: {ex.Message}");
+        }
+    }
 }

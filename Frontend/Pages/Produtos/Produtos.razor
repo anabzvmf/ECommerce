@@ -1,0 +1,24 @@
+@page "/produtos"
+@using Frontend.Componentes
+@using DTO.Produtos
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Routing
+
+<div class="max-w-7xl mx-auto">
+    <section class="bg-blue-600 text-white rounded-lg p-8 mb-8">
+        <h1 class="text-3xl font-bold">Produtos</h1>
+        <p class="mt-2 text-lg">Gerencie e visualize os produtos cadastrados.</p>
+    </section>
+
+    <div class="flex justify-end mb-6">
+        <NavLink class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" href="/produtos/registrar_produto" Match="NavLinkMatch.All">
+            Cadastrar Novo Produto
+        </NavLink>
+    </div>
+
+    <div class="flex justify-end mb-6">
+        <NavLink class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" href="/produtos/lista_produtos" Match="NavLinkMatch.All">
+            Listar Produtos
+        </NavLink>
+    </div>
+</div>

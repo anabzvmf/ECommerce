@@ -1,15 +1,3 @@
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\bin\Debug\net9.0\DTO.deps.json
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\bin\Debug\net9.0\DTO.dll
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\bin\Debug\net9.0\DTO.pdb
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.AssemblyInfoInputs.cache
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.AssemblyInfo.cs
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.csproj.CoreCompileInputs.cache
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.sourcelink.json
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.dll
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\refint\DTO.dll
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.pdb
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\ref\DTO.dll
 C:\Users\Iago\Documents\PWA\ECommerce\DTO\bin\Debug\net9.0\DTO.deps.json
 C:\Users\Iago\Documents\PWA\ECommerce\DTO\bin\Debug\net9.0\DTO.dll
 C:\Users\Iago\Documents\PWA\ECommerce\DTO\bin\Debug\net9.0\DTO.pdb
@@ -22,3 +10,15 @@ C:\Users\Iago\Documents\PWA\ECommerce\DTO\obj\Debug\net9.0\DTO.dll
 C:\Users\Iago\Documents\PWA\ECommerce\DTO\obj\Debug\net9.0\refint\DTO.dll
 C:\Users\Iago\Documents\PWA\ECommerce\DTO\obj\Debug\net9.0\DTO.pdb
 C:\Users\Iago\Documents\PWA\ECommerce\DTO\obj\Debug\net9.0\ref\DTO.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\bin\Debug\net9.0\DTO.deps.json
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\bin\Debug\net9.0\DTO.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\bin\Debug\net9.0\DTO.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.AssemblyInfoInputs.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.AssemblyInfo.cs
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.sourcelink.json
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\refint\DTO.dll
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\DTO.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\DTO\obj\Debug\net9.0\ref\DTO.dll
