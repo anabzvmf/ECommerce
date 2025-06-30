@@ -54,7 +54,6 @@ C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\ww
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.Options.olt0jsk54c.wasm
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.Primitives.3sx0y6ui4u.wasm
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Extensions.WebEncoders.5g1hzlp5lk.wasm
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.JSInterop.sk08br83jz.wasm
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.fkdz83fr0b.wasm
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.Net.Http.Headers.vhfw8f9f40.wasm
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.VisualBasic.Core.hev5t09xbg.wasm
@@ -451,7 +450,6 @@ C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\ww
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Collections.cip8dbnu43.wasm.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Net.WebSockets.9fasahbeiq.wasm.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.IO.FileSystem.AccessControl.3yfpgyrku1.wasm.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.JSInterop.sk08br83jz.wasm.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Net.qt5fpja9tg.wasm.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Runtime.Serialization.Xml.6heyz9oosd.wasm.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\System.Globalization.Calendars.x0sb683rhi.wasm.gz
@@ -1045,7 +1043,6 @@ C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\co
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\6j7kca39k4-olt0jsk54c.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\r957njzi9g-3sx0y6ui4u.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\0pc32nzxr0-5g1hzlp5lk.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\xx92mwfccw-sk08br83jz.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\oeivqqmxro-fkdz83fr0b.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\l7u1dc2tk4-vhfw8f9f40.gz
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\to2d3aw3o1-l9djitjvgt.gz
@@ -1247,43 +1244,6 @@ C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\Fr
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\refint\Frontend.dll
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\Frontend.pdb
 C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\ref\Frontend.dll
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\DTO.z7z95jnpc3.wasm
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.see6zoypwo.wasm
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Infra.3l5hag5bzc.wasm
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Mappers.hemciwqqpx.wasm
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Model.zj8pp6emr6.wasm
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\UseCases.pad5e8hgw3.wasm
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\DTO.z7z95jnpc3.wasm.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\UseCases.pad5e8hgw3.wasm.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Mappers.hemciwqqpx.wasm.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.see6zoypwo.wasm.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\DTO.s5sg6qpj99.pdb
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.gvjlt3cqob.pdb
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Infra.wo72xhjflw.pdb
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Mappers.uig7g6ab3z.pdb
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Model.lyouktutz1.pdb
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\UseCases.fl199m73t1.pdb
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\DTO.s5sg6qpj99.pdb.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Model.lyouktutz1.pdb.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.gvjlt3cqob.pdb.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\UseCases.fl199m73t1.pdb.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Mappers.uig7g6ab3z.pdb.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Infra.wo72xhjflw.pdb.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Model.zj8pp6emr6.wasm.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Infra.3l5hag5bzc.wasm.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\3uzm3lnpx1-z7z95jnpc3.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\wt3iibnzud-3l5hag5bzc.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\9agf1qt5vm-hemciwqqpx.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\qpiepnixbn-zj8pp6emr6.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\4ml9i2yk03-pad5e8hgw3.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\6hebs1yku9-s5sg6qpj99.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\7ae1384vxu-lyouktutz1.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\9g3mdhhg9w-fl199m73t1.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\kx7dqcazo3-uig7g6ab3z.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\lewjohrv8k-wo72xhjflw.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\idv3gmpu33-see6zoypwo.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\820j4a4l7m-gvjlt3cqob.gz
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\njn95cf9xo-w0j5rnauou.gz
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\Frontend.csproj.AssemblyReference.cache
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\rpswa.dswa.cache.json
 C:\Users\Iago\Documents\PWA\ECommerce\Frontend\obj\Debug\net9.0\Frontend.GeneratedMSBuildEditorConfig.editorconfig
@@ -2569,3 +2529,43 @@ C:\Users\Iago\Documents\PWA\ECommerce\frontend\bin\Debug\net9.0\wwwroot\_framewo
 C:\Users\Iago\Documents\PWA\ECommerce\frontend\obj\Debug\net9.0\compressed\idv3gmpu33-osw1qe00h5.gz
 C:\Users\Iago\Documents\PWA\ECommerce\frontend\obj\Debug\net9.0\compressed\820j4a4l7m-xeiju792fr.gz
 C:\Users\Iago\Documents\PWA\ECommerce\frontend\obj\Debug\net9.0\compressed\njn95cf9xo-62wigk83a8.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.JSInterop.fzkuir7tme.wasm
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Microsoft.JSInterop.fzkuir7tme.wasm.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\DTO.s100sfsa63.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\DTO.y5vtr64kn4.wasm
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Infra.gyalawqje7.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Infra.v072xsw9tg.wasm
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Mappers.gxnmxrynia.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Mappers.c27rwq959n.wasm
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Model.cf1x1blqqu.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Model.31jsvaeslx.wasm
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\UseCases.54txds7wri.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\UseCases.g41imnvbu1.wasm
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\DTO.y5vtr64kn4.wasm.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\UseCases.g41imnvbu1.wasm.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\DTO.s100sfsa63.pdb.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Model.cf1x1blqqu.pdb.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Mappers.c27rwq959n.wasm.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\UseCases.54txds7wri.pdb.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Mappers.gxnmxrynia.pdb.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Infra.gyalawqje7.pdb.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Model.31jsvaeslx.wasm.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Infra.v072xsw9tg.wasm.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\xx92mwfccw-fzkuir7tme.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\3uzm3lnpx1-y5vtr64kn4.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\wt3iibnzud-v072xsw9tg.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\9agf1qt5vm-c27rwq959n.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\qpiepnixbn-31jsvaeslx.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\4ml9i2yk03-g41imnvbu1.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\6hebs1yku9-s100sfsa63.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\7ae1384vxu-cf1x1blqqu.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\9g3mdhhg9w-54txds7wri.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\kx7dqcazo3-gxnmxrynia.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\lewjohrv8k-gyalawqje7.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.4artzoosrr.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.2zjwdr1gyl.wasm
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.4artzoosrr.pdb.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\bin\Debug\net9.0\wwwroot\_framework\Frontend.2zjwdr1gyl.wasm.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\idv3gmpu33-2zjwdr1gyl.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\820j4a4l7m-4artzoosrr.gz
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Frontend\obj\Debug\net9.0\compressed\njn95cf9xo-bx43tlg5bb.gz

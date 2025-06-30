@@ -1,8 +1,9 @@
 @page "/perfil"
 @inject NavigationManager NavigationManager
 @inject IUsuarioService UsuarioService
-@using DTO.ControleAcessos // Importa UsuarioDTO
+@using DTO.ControleAcessos 
 @using DTO.Pedidos
+@using UseCases.ControleAcessos
 
 <div class="max-w-4xl mx-auto px-4 py-8">
     <!-- Cabeçalho -->
@@ -28,9 +29,8 @@
             <div class="flex flex-col md:flex-row gap-6">
                 <!-- Informações -->
                 <div class="flex-grow">
-                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">@Usuario?.Nome</h2>
-                    <p class="text-gray-600 dark:text-gray-300 mt-2">ID: @Usuario?.Id</p>
-                    <p class="text-gray-600 dark:text-gray-300">@Usuario?.Email</p>
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Nome: @Usuario?.Nome</h2>  
+                    <p class="text-gray-600 dark:text-gray-300">Email: @Usuario?.Email</p>
                 </div>
             </div>
 
@@ -85,7 +85,7 @@
 @code {
     private UsuarioDTO? Usuario;
     private bool ModoEscuro { get; set; } = false;
-    private List<Pedido> Pedidos = new();
+    private List<PedidoDTO> Pedidos = new();
 
     protected override async Task OnInitializedAsync()
     {
