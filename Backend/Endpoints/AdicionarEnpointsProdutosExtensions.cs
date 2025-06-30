@@ -1,13 +1,11 @@
 using DTO.Produtos;
 using Model.Produtos;
 using UseCases;
-using UseCases.ControleAcessos;
-using UseCases.Produtos; 
-using Microsoft.Extensions.Caching.Distributed;
+using UseCases.Produtos;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Reflection;
-using System.Text;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity.Data;
 
 namespace Backend.Endpoints;
 
@@ -22,38 +20,45 @@ public static class AdicionarEnpointsProdutosExtensions
         var produtos = app.MapGroup("/produtos")
             .WithTags("Produtos")
             .WithDescription("Endpoints relacionados a produtos");
-        produtos.MapGet("/", RetornarProdutos)
-            .WithName("Retornar Produtos")
-            .WithSummary("Retorna os Produtos");
+
+
+        // produtos.MapGet("/", RetornarProdutos)
+        //     .WithName("Retornar Produtos")
+        //     .WithSummary("Retorna todos os produtos");
+
 
         produtos.MapPost("/", InserirProdutos)
-            .WithName("Inserir produtos")
+            .WithName("Inserir Produtos")
             .WithSummary("Insere um novo produto na base de dados");
 
-        produtos.MapPut("/{id}", AlterarProduto)
-            .WithName("Alterar produto")
-            .WithSummary("Altera um produto na base de dados")
-            .RequireAuthorization();
-    }
 
-    private static async Task<IResult> InserirProdutos(RegistrarProdutoDTO produto, [FromServices]IProdutoUseCase produtoService)
+        // produtos.MapPut("/{id}", AlterarProduto)
+        //     .WithName("Alterar Produto")
+        //     .WithSummary("Altera um produto na base de dados")
+        //     .RequireAuthorization();
+    }
+    private static async Task<IResult> InserirProdutos(RegistrarProdutoDTO produto, [FromServices] IProdutoUseCase produtoService)
     {
         try
         {
-            var produtoDTO = new ProdutoDTO
+            if (produto == null)
             {
-                Id = produto.Id,
+                return TypedResults.BadRequest("Dados inválidos.");
+            }
+
+            var produtoDTO = new RegistrarProdutoDTO
+            {
                 Nome = produto.Nome,
                 Descricao = produto.Descricao,
                 Preco = produto.Preco,
-                Estoque = produto.Estoque,
-                ImagemUrl = produto.ImagemUrl,
-                DataCadastro = produto.DataCadastro,
-                CategoriaId = produto.CategoriaId
+                Estoque = produto.Estoque
             };
+
+        
             var resultado = await produtoService.InserirProduto(produtoDTO);
+
             return resultado.Sucesso
-                ? TypedResults.Created($"/{resultado.Objeto.Id}", resultado.Objeto)
+                ? TypedResults.Created($"/produtos/{resultado.Objeto.Id}", resultado.Objeto)
                 : TypedResults.BadRequest(resultado.Erros);
         }
         catch (Exception ex)
@@ -65,15 +70,5 @@ public static class AdicionarEnpointsProdutosExtensions
 #endif
             return TypedResults.Problem("Internal server error");
         }
-    }
-
-    private static async Task<IResult> RetornarProdutos([FromServices]IProdutoUseCase produtoService)
-    {
-        return TypedResults.Ok();
-    }
-
-    private static async Task<IResult> AlterarProduto(int id, RegistrarProdutoDTO produto, [FromServices]IProdutoUseCase produtoService)
-    {
-        return TypedResults.Ok();
     }
 }

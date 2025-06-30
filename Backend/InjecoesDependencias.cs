@@ -1,11 +1,16 @@
 using Model.ControleAcessos;
+using Model.Produtos;
 using Infra.ControlesAcessos;
 using UseCases.ControleAcessos;
 using Mappers.ControleAcessos;
+using Mappers.Produtos;
 using Mappers;
 using DTO.ControleAcessos;
+using DTO.Produtos;
 
 using Microsoft.AspNetCore.Identity;
+using Infra.Produtos;
+using UseCases.Produtos;
 
 namespace Backend
 {
@@ -18,6 +23,7 @@ namespace Backend
             #region DAOs
             
             services.AddScoped<IUsuarioDAO, UsuarioDAO>();
+            services.AddScoped<IProdutoDAO, ProdutosDAO>();
             // services.AddScoped<IPostagemDAO, PostagemDAO>();
             // services.AddScoped<IPostagemReacaoDAO, PostagemReacaoDAO>();
 
@@ -26,6 +32,7 @@ namespace Backend
             #region UseCases
 
             services.AddScoped<IControleAcessoUseCase, ControleAcessoUseCase>();
+            services.AddScoped<IProdutoUseCase, ProdutoUseCase>();
             // services.AddScoped<IPostagemUseCase, PostagemUseCase>();
             // services.AddScoped<IPostagemReacaoUseCase, PostagemReacaoUseCase>();
 
@@ -34,6 +41,7 @@ namespace Backend
             #region Mappers
 
             services.AddScoped<IMapper<Usuario, UsuarioDTO>, UsuarioMapper>();
+            services.AddScoped<IMapper<Produto, ProdutoDTO>, ProdutoMapper>();
             // services.AddScoped<IMapper<Postagem, PostagemDTO>, PostagemMapper>();
             // services.AddScoped<IMapper<PostagemReacao, PostagemReacaoDTO>, PostagemReacaoMapper>();
 

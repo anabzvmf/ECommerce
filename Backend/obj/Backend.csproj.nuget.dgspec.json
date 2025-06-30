@@ -1,42 +1,48 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Backend\\Backend.csproj": {}
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Backend\\Backend.csproj": {
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Backend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\Mappers.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\Mappers.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\Mappers.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\Mappers.csproj"
               },
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj"
               },
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\UseCases\\UseCases.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\UseCases\\UseCases.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\UseCases\\UseCases.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\UseCases\\UseCases.csproj"
               }
             }
           }
@@ -51,7 +57,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -101,26 +107,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj": {
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -139,7 +151,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -160,34 +172,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Infra\\Infra.csproj": {
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Infra\\obj\\",
+        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj"
               }
             }
           }
@@ -202,7 +220,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -241,37 +259,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\Mappers.csproj": {
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\Mappers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\Mappers.csproj",
+        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\Mappers.csproj",
         "projectName": "Mappers",
-        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\Mappers.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\obj\\",
+        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\Mappers.csproj",
+        "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj"
               }
             }
           }
@@ -286,7 +310,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -307,26 +331,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj": {
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\obj\\",
+        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -345,7 +375,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -366,43 +396,49 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\UseCases\\UseCases.csproj": {
+    "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\UseCases\\UseCases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\UseCases\\UseCases.csproj",
+        "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\UseCases\\UseCases.csproj",
         "projectName": "UseCases",
-        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\UseCases\\UseCases.csproj",
-        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\UseCases\\obj\\",
+        "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\UseCases\\UseCases.csproj",
+        "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\UseCases\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Infra\\Infra.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Infra\\Infra.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj"
               },
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\Mappers.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\Mappers.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\Mappers.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\Mappers.csproj"
               },
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj"
+              "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj"
               }
             }
           }
@@ -417,7 +453,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -438,7 +474,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

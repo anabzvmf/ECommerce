@@ -1,15 +1,11 @@
-namespace DTO.Produtos;
-
-public record struct RegistrarProdutoDTO
-(
-    long Id,
-    string Nome,
-    string Descricao,
-    decimal Preco,
-    int Estoque,
-    string? ImagemUrl,
-    DateTime DataCadastro,
-    long CategoriaId
-)
+namespace DTO.Produtos
 {
+    public class RegistrarProdutoDTO
+    {
+        public string Nome { get; set; } = string.Empty;
+        public string Descricao { get; set; } = string.Empty;
+        public int Preco { get; set; }
+        public int Estoque { get; set; }
+        // Outras propriedades, como ImagemUrl, DataCadastro, etc.
+    }
 }

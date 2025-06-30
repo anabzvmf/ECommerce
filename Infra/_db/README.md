@@ -5,7 +5,7 @@ CREATE TABLE Produto (
     Nome VARCHAR(255) NOT NULL,             
     Descricao TEXT,                         
     Preco DECIMAL(10, 2) NOT NULL,          
-    Estoque INT NOT NULL,                   
+    Estoque INT,                   
     ImagemUrl VARCHAR(255),                 
     DataCadastro DATETIME DEFAULT CURRENT_TIMESTAMP
 );

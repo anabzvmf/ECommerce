@@ -1,7 +1,7 @@
 using Model.Produtos;
 
 namespace Infra.Produtos;
-public class PostagemDAO : BaseDAO<Produto>, IProdutoDAO
+public class ProdutosDAO : BaseDAO<Produto>, IProdutoDAO
 {
     protected override string NomeTabela => "produto";
 

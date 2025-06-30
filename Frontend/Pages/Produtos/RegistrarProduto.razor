@@ -69,7 +69,7 @@
         {
             if (imagemFile != null)
             {
-                produto.ImagemUrl = await SaveImageAsync(imagemFile);  
+                @* produto.ImagemUrl = await SaveImageAsync(imagemFile);   *@
             }
 
             var result = await ApiBackend.PostAsync("produtos", produto);  

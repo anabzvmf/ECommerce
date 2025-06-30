@@ -4,5 +4,6 @@ namespace UseCases.Produtos;
 
 public interface IProdutoUseCase
 {
-    Task<ResultadoUnico<ProdutoDTO>> InserirProduto(ProdutoDTO produto);
+    Task<ResultadoUnico<ProdutoDTO>> InserirProduto(RegistrarProdutoDTO produto);
+    
 }
