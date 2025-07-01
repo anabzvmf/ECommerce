@@ -1,8 +1,10 @@
 @page "/produtos/lista_produtos"
 @using DTO.Produtos
 @using Helpers
+@using DTO.Carrinho
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
+@inject Frontend.Helpers.UsuarioService UsuarioService
 
 <div class="container mx-auto p-4">
     <h2 class="text-3xl font-bold text-center text-blue-600 mb-6">
@@ -30,12 +32,12 @@
                     <p class="mt-2 text-sm text-gray-500">Estoque: @produto.Estoque</p>
 
                     <div class="mt-4 flex justify-between items-center">
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" >
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
                             Editar
                         </button>
-                        @* <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700" @onclick="() => DeletarProduto(produto.Id)">
-                            Deletar
-                        </button> *@
+                        <button class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700" @onclick="() => AdicionarAoCarrinho(produto.Id)">
+                            Adicionar ao Carrinho
+                        </button>
                     </div>
                 </div>
             }
@@ -94,5 +96,10 @@
     private async Task CarregarMaisProdutos()
     {
         await CarregarProdutos();
+    }
+
+    private async Task AdicionarAoCarrinho(long produtoId)
+    {
+        // Lógica de adicionar ao carrinho foi movida para Home.razor
     }
 }

@@ -7,7 +7,7 @@ namespace UseCases.CarrinhoCompras;
 
 public interface ICarrinhoService
 {
-    Task AdicionarItemAsync(Produto produto);
+    Task AdicionarItemAsync(DTO.Carrinho.CarrinhoItemDTO itemDto);
     Task<Carrinho> ObterCarrinhoAsync(long id);
 
     Task RemoverDoCarrinhoAsync(long id);

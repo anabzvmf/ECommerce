@@ -11,29 +11,14 @@ public class CarrinhoService : ICarrinhoService
     CarrinhoComprasDAO cDao = new CarrinhoComprasDAO();
     private static Carrinho carrinho = new Carrinho();
 
-    public async Task AdicionarItemAsync(Produto produto)
+    public async Task AdicionarItemAsync(DTO.Carrinho.CarrinhoItemDTO itemDto)
     {
-        var itemExistente = carrinho.Itens.FirstOrDefault(x => x.Produto.Id == produto.Id);
-
-        if (itemExistente != null)
-        {
-            itemExistente.Quantidade++;
-        }
-        else
-        {
-            var novoItem = new ItemCarrinho
-            {
-                Produto = produto,
-                Quantidade = 1
-            };
-            carrinho.Itens.Add(novoItem);
-        }
-
-        await Task.CompletedTask;
+        // Persistir no banco
+        await cDao.InserirItemAsync(itemDto);
     }
 
     
-    public async Task<Carrinho> ObterCarrinho(long id)
+    public async Task<Carrinho> ObterCarrinhoAsync(long id)
     {
         return await cDao.ObterProdutosCarrinhoAsync(id);
     }

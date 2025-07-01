@@ -1,25 +1,36 @@
 using Model.CarrinhoCompras;
 
-namespace Infra.CarrinhoCompras;
+using Model.CarrinhoCompras;
 
-public class CarrinhoComprasDAO : BaseDAO<Carrinho>, ICarrinhoDAO
+namespace Infra.CarrinhoCompras
 {
-    protected override string NomeTabela => "carrinhoCompras";
-
-    public async Task<Carrinho> ObterProdutosCarrinhoAsync(long id)
+    public class CarrinhoComprasDAO : BaseDAO<Carrinho>, ICarrinhoDAO
     {
-        string sql = $"SELECT * FROM carrinhoCompras where id = @id";
+        protected override string NomeTabela => "carrinhoCompras";
 
-        var result = await SelecionarAsync<ItemCarrinho>(sql);
-
-        Carrinho c = new Carrinho();
-
-        foreach (var item in result)
+        public async Task<Carrinho> ObterProdutosCarrinhoAsync(long id)
         {
-            c.Itens.Add(item);
+            string sql = $"SELECT * FROM carrinhoCompras where id = @id";
+            var result = await SelecionarAsync<ItemCarrinho>(sql, new { id });
+            Carrinho c = new Carrinho();
+            foreach (var item in result)
+            {
+                c.Itens.Add(item);
+            }
+            return c;
         }
 
-        return c;
+        public async Task InserirItemAsync(DTO.Carrinho.CarrinhoItemDTO item)
+        {
+            // Supondo que a tabela tenha colunas: UsuarioId, ProdutoId, Quantidade
+            string sql = "INSERT INTO CarrinhoItem (UsuarioId, ProdutoId, Quantidade) VALUES (@UsuarioId, @ProdutoId, @Quantidade)";
+            var parametros = new
+            {
+                UsuarioId = item.UsuarioId,
+                ProdutoId = item.ProdutoId,
+                Quantidade = item.Quantidade
+            };
+            await ExecutarAsync(sql, parametros);
+        }
     }
-
 }

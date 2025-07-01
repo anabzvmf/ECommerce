@@ -2,6 +2,8 @@
 @using Frontend.Componentes
 @using DTO.Produtos
 @using Helpers
+@inject IJSRuntime JS
+@inject Frontend.Helpers.UsuarioService UsuarioService
 
 <div class="max-w-7xl mx-auto">
     <!-- Hero Section -->
@@ -17,7 +19,11 @@
         <ProductCard Title="IPad" Price="R$ 3.399" Image="img/ipad.png" />
     </div> *@
 
-    @if (produtos == null)
+    @if (!string.IsNullOrEmpty(Mensagem))
+    {
+        <div class="alert alert-info text-center">@Mensagem</div>
+    }
+    if (produtos == null)
     {
         <div class="text-center">Carregando produtos...</div>
     }
@@ -37,7 +43,6 @@
                     <p class="mt-2 text-lg font-bold text-blue-500">R$ @produto.Preco</p>
                     <p class="mt-2 text-sm text-gray-500">Estoque: @produto.Estoque</p>
 
-                    
                     <div class="mt-4 flex justify-between items-center">
                         <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" @onclick="() => AdicionarProdutoAoCarrinho(produto.Id)">
                             Carrinho
@@ -56,7 +61,7 @@
 </div>
 
 @code {
-    private List<ProdutoDTO> produtos;
+    private List<ProdutoDTO>? produtos;
     private bool carregando = false;
     private int paginaAtual = 1;
     private const int TamanhoPagina = 10;
@@ -95,16 +100,33 @@
         }
     }
 
+    private string? Mensagem { get; set; }
+
     private async Task AdicionarProdutoAoCarrinho(long produtoId)
     {
-        try
+        Mensagem = null;
+        var usuario = await UsuarioService.ObterUsuarioLogadoAsync();
+        if (usuario == null)
         {
-            await ApiBackend.AdicionarAoCarrinho(produtoId, 1);
-            // Exiba uma mensagem de sucesso se desejar
+            Mensagem = "Você precisa estar logado para adicionar ao carrinho.";
+            StateHasChanged();
+            return;
         }
-        catch (Exception ex)
+        var idUsuario = usuario?.Id ?? 0;
+        if (idUsuario == 0)
         {
-            Console.WriteLine($"Erro ao adicionar ao carrinho: {ex.Message}");
+            Mensagem = "Erro ao identificar o usuário logado. Faça login novamente.";
+            StateHasChanged();
+            return;
         }
+        var item = new DTO.Carrinho.CarrinhoItemDTO
+        {
+            UsuarioId = idUsuario,
+            ProdutoId = produtoId,
+            Quantidade = 1
+        };
+        await ApiBackend.PostAsync<object, DTO.Carrinho.CarrinhoItemDTO>("carrinho/adicionar", item);
+        Mensagem = "Produto adicionado ao carrinho!";
+        StateHasChanged();
     }
 }

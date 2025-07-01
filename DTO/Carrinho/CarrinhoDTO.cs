@@ -7,5 +7,5 @@ namespace DTO.Carrinho;
 public class CarrinhoDTO
 {
     public List<CarrinhoItemDTO> Itens { get; set; } = new();
-    public decimal Total => Itens.Sum(i => i.Preco * i.Quantidade);
+    // public decimal Total => Itens.Sum(i => i.Preco * i.Quantidade);
 }
