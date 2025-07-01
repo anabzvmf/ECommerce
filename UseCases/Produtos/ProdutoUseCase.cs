@@ -29,8 +29,8 @@ namespace UseCases.Produtos
                     Nome = produtoDTO.Nome,
                     Descricao = produtoDTO.Descricao,
                     Preco = produtoDTO.Preco,
-                    Estoque = produtoDTO.Estoque
-                    // ImagemUrl = produtoDTO.ImagemUrl,  
+                    Estoque = produtoDTO.Estoque,
+                    ImagemUrl = produtoDTO.ImagemUrl
                     // DataCadastro = produtoDTO.DataCadastro  
                 };
 

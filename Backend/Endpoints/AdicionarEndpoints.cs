@@ -10,7 +10,7 @@ public static class AdicionarEndpoints
     {
         app.AdicionarEndpointsUsuarios();
         app.AdicionarEndpointsProdutos();
-        app.AdicionarEndpointsCarrinho();
-        app.AdicionarEndpointsPedidos();
+        // app.AdicionarEndpointsCarrinho();
+        // app.AdicionarEndpointsPedidos();
     }
 }

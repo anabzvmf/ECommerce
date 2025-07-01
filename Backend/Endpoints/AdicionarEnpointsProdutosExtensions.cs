@@ -51,7 +51,8 @@ public static class AdicionarEnpointsProdutosExtensions
                 Nome = produto.Nome,
                 Descricao = produto.Descricao,
                 Preco = produto.Preco,
-                Estoque = produto.Estoque
+                Estoque = produto.Estoque,
+                ImagemUrl = produto.ImagemUrl
             };
 
 

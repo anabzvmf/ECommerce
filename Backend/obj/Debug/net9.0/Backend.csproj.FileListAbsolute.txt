@@ -1,3 +1,20 @@
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.csproj.AssemblyReference.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.AssemblyInfoInputs.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.AssemblyInfo.cs
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.sourcelink.json
+C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.csproj.AssemblyReference.cache
+C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.AssemblyInfoInputs.cache
+C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.AssemblyInfo.cs
+C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.sourcelink.json
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\bin\Debug\net9.0\_db\dados.db
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\bin\Debug\net9.0\appsettings.json
@@ -55,15 +72,6 @@ C:\Users\Iago\Documents\PWA\ECommerce\Backend\bin\Debug\net9.0\Model.pdb
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\bin\Debug\net9.0\UseCases.pdb
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\bin\Debug\net9.0\Mappers.pdb
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\bin\Debug\net9.0\Infra.pdb
-C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.csproj.AssemblyReference.cache
-C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\rpswa.dswa.cache.json
-C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.AssemblyInfoInputs.cache
-C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.AssemblyInfo.cs
-C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.csproj.CoreCompileInputs.cache
-C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.sourcelink.json
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -78,11 +86,3 @@ C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\refint\Backend.dl
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.pdb
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\Backend.genruntimeconfig.cache
 C:\Users\Iago\Documents\PWA\ECommerce\Backend\obj\Debug\net9.0\ref\Backend.dll
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.csproj.AssemblyReference.cache
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.AssemblyInfoInputs.cache
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.AssemblyInfo.cs
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.csproj.CoreCompileInputs.cache
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\mathe\OneDrive\Área de Trabalho\ECommerce\Backend\obj\Debug\net9.0\Backend.sourcelink.json

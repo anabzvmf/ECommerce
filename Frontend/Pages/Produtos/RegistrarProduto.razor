@@ -27,8 +27,9 @@
             </div>
             
             <div class="mb-4">
-                <label class="block text-gray-700 mb-2" for="Imagem">Imagem:</label>
+                <label class="block text-gray-700 mb-2" for="Imagem">Imagem (link):</label>
                 @* <InputFile type="file" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100" id="Imagem" @onclick="HandleImageChange" /> *@
+                <input type="text" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100" @bind="produto.ImagemUrl" />
             </div>
 
             @if (!string.IsNullOrEmpty(mensagem))
@@ -74,8 +75,10 @@
 
             var result = await ApiBackend.PostAsync("produtos", produto);  
             Console.WriteLine($"[Produto] Iniciando cadastro para: {produto.Nome}");
+
             mensagem = $"Produto '{result.Nome}' criado com sucesso!";
             Console.WriteLine($"Produto '{result.Nome}' criado com sucesso!");
+            
             StateHasChanged();
 
             
@@ -90,18 +93,18 @@
         }
     }
 
-    private async Task HandleImageChange(InputFileChangeEventArgs e)
+    @* private async Task HandleImageChange(InputFileChangeEventArgs e)
     {
         imagemFile = e.File;
         if (imagemFile != null)
         {
-            // Lógica de manipulação da imagem...
+            
         }
-    }
+    } *@
 
     
 
-    private async Task<string> SaveImageAsync(IBrowserFile file)
+    @* private async Task<string> SaveImageAsync(IBrowserFile file)
     {
         var fileName = $"{Guid.NewGuid()}{Path.GetExtension(file.Name)}";
         var filePath = Path.Combine("wwwroot", "img", fileName);
@@ -110,7 +113,7 @@
         await file.OpenReadStream(maxAllowedSize: 5 * 1024 * 1024).CopyToAsync(stream);  
 
         return $"/img/{fileName}";  
-    }
+    } *@
 
     private static async Task SetTimeout(int milliseconds, Action action)
     {

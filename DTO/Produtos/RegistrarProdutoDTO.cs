@@ -6,6 +6,7 @@ namespace DTO.Produtos
         public string Descricao { get; set; } = string.Empty;
         public int Preco { get; set; }
         public int Estoque { get; set; }
-        // Outras propriedades, como ImagemUrl, DataCadastro, etc.
+
+        public string ImagemUrl { get; set; } = string.Empty;
     }
 }

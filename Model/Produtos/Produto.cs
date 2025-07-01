@@ -10,7 +10,7 @@ public class Produto : BaseModel
     public string Descricao { get; set; } = string.Empty;
     public int Preco { get; set; }
     public int Estoque;
-    public string? ImagemUrl { get; set; } = string.Empty;
+    public string ImagemUrl { get; set; } = string.Empty;
     public DateTime DataCadastro { get; set; }
     private long Id;
 }
