@@ -52,5 +52,13 @@ public class ProdutosDAO : BaseDAO<Produto>, IProdutoDAO
 
         return produto;
     }
+    public async Task<Produto> ObterUnicoProdutoAsync(long id)
+    {
+        string sql = "SELECT * FROM produto WHERE id=@id";
+
+        var result = await SelecionarUnicoAsync<Produto>(sql);
+
+        return result;
+    }
 
 }

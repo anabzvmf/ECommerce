@@ -7,6 +7,7 @@ using System.Net.Http;
 using System;
 using UseCases.ControleAcessos;
 using Frontend.Helpers;
+using UseCases.CarrinhoCompras;
 
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -16,7 +17,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
-builder.Services.AddSingleton<CartService>();
+builder.Services.AddSingleton<ICarrinhoService, CarrinhoService>();
 
 
 await builder.Build().RunAsync();

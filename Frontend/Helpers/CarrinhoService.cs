@@ -1,33 +1,37 @@
 using Model.CarrinhoCompras;
 using Model.Produtos;
+using UseCases.CarrinhoCompras;
+using Infra.CarrinhoCompras;
 
 namespace Frontend.Helpers;
-public class CartService
+public class CarrinhoService : ICarrinhoService
 {
-    private Carrinho carrinho;
 
-    public CartService()
+    CarrinhoComprasDAO cDao = new CarrinhoComprasDAO();
+    private static Carrinho carrinho = new Carrinho();
+
+    public async Task AdicionarItemAsync(DTO.Carrinho.CarrinhoItemDTO itemDto)
     {
-        carrinho = new Carrinho();
+        // Persistir no banco
+        await cDao.InserirItemAsync(itemDto);
     }
 
-    public Carrinho ObterCarrinho()
+    
+    public async Task<Carrinho> ObterCarrinhoAsync(long id)
     {
-        return carrinho;
+        Console.WriteLine($"[CarrinhoService] indo pegar");
+        return await cDao.ObterProdutosCarrinhoAsync(id);
     }
 
-    public void AdicionarItemAoCarrinho(Produto produto, int quantidade)
+    public async Task RemoverDoCarrinhoAsync(long produtoId)
     {
-        carrinho.addItem(produto, quantidade);
-    }
+        var itemParaRemover = carrinho.Itens.FirstOrDefault(p => p.Produto.Id == produtoId);
 
-    public void RemoverItemDoCarrinho(int produtoId)
-    {
-        carrinho.RemoverItem(produtoId);
-    }
+        if (itemParaRemover != null)
+        {
+            carrinho.Itens.Remove(itemParaRemover);
+        }
 
-    public void LimparCarrinho()
-    {
-        carrinho.LimparCarrinho();
+        await Task.CompletedTask;
     }
 }

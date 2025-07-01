@@ -417,10 +417,10 @@
           }
         }
       },
-      "Microsoft.Data.Sqlite/9.0.5": {
+      "Microsoft.Data.Sqlite/9.0.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "9.0.5",
+          "Microsoft.Data.Sqlite.Core": "9.0.6",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10",
           "SQLitePCLRaw.core": "2.1.10"
         },
@@ -431,7 +431,7 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.Data.Sqlite.Core/9.0.5": {
+      "Microsoft.Data.Sqlite.Core/9.0.6": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.1.10"
@@ -1201,7 +1201,7 @@
           "DTO": "1.0.0",
           "Dapper": "2.1.66",
           "Microsoft.AspNetCore.Identity": "2.3.1",
-          "Microsoft.Data.Sqlite": "9.0.5",
+          "Microsoft.Data.Sqlite": "9.0.6",
           "Model": "1.0.0",
           "SnowflakeGenerator": "2.0.0"
         },
@@ -1669,10 +1669,10 @@
           }
         }
       },
-      "Microsoft.Data.Sqlite/9.0.5": {
+      "Microsoft.Data.Sqlite/9.0.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "9.0.5",
+          "Microsoft.Data.Sqlite.Core": "9.0.6",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10",
           "SQLitePCLRaw.core": "2.1.10"
         },
@@ -1683,7 +1683,7 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.Data.Sqlite.Core/9.0.5": {
+      "Microsoft.Data.Sqlite.Core/9.0.6": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.1.10"
@@ -2332,7 +2332,7 @@
           "DTO": "1.0.0",
           "Dapper": "2.1.66",
           "Microsoft.AspNetCore.Identity": "2.3.1",
-          "Microsoft.Data.Sqlite": "9.0.5",
+          "Microsoft.Data.Sqlite": "9.0.6",
           "Model": "1.0.0",
           "SnowflakeGenerator": "2.0.0"
         },
@@ -2897,24 +2897,24 @@
         "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
-    "Microsoft.Data.Sqlite/9.0.5": {
-      "sha512": "Fht/vwX7uzPaIdlj1xtcpKD225GXjPOj7iW8934NNiTfBX5uqeCy2TdlPWPpLj+VPty/UmfgUSJSb55hXHqJMw==",
+    "Microsoft.Data.Sqlite/9.0.6": {
+      "sha512": "JtLL15uSBqqkDs6mhRc4rUbNPaJJCgN+gGQfLs+paD600td6V6YGgOreXWWoIKdq2eyRipggSJnE/eM5PlxYVA==",
       "type": "package",
-      "path": "microsoft.data.sqlite/9.0.5",
+      "path": "microsoft.data.sqlite/9.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "PACKAGE.md",
         "lib/netstandard2.0/_._",
-        "microsoft.data.sqlite.9.0.5.nupkg.sha512",
+        "microsoft.data.sqlite.9.0.6.nupkg.sha512",
         "microsoft.data.sqlite.nuspec"
       ]
     },
-    "Microsoft.Data.Sqlite.Core/9.0.5": {
-      "sha512": "cP5eBSqra4Ae80X72g0h2N+jdrA4BgoMQmz9JaQmKAEXUHw9N21DPIBqIyMjOo2fK9ISiGytlAOxBAJf1hEvqg==",
+    "Microsoft.Data.Sqlite.Core/9.0.6": {
+      "sha512": "3auiudiViGzj1TidUdjuDqtP3+f6PBk4xdw6r9sBaTtkYoGc3AZn0cP8LgYZaLRnJBqY5bXRLB+qhjoB+iATzA==",
       "type": "package",
-      "path": "microsoft.data.sqlite.core/9.0.5",
+      "path": "microsoft.data.sqlite.core/9.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2926,7 +2926,7 @@
         "lib/net8.0/Microsoft.Data.Sqlite.xml",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
-        "microsoft.data.sqlite.core.9.0.5.nupkg.sha512",
+        "microsoft.data.sqlite.core.9.0.6.nupkg.sha512",
         "microsoft.data.sqlite.core.nuspec"
       ]
     },
@@ -4174,6 +4174,7 @@
       "Microsoft.AspNetCore.Components.Web >= 9.0.6",
       "Microsoft.AspNetCore.Components.WebAssembly >= 9.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 9.0.0",
+      "Microsoft.Data.Sqlite >= 9.0.6",
       "Microsoft.JSInterop >= 9.0.6",
       "Microsoft.NET.ILLink.Tasks >= 9.0.6",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 9.0.6",
@@ -4188,11 +4189,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\Frontend.csproj",
+      "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\Frontend.csproj",
       "projectName": "Frontend",
-      "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\Frontend.csproj",
+      "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\Frontend.csproj",
       "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Frontend\\obj\\",
+      "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\frontend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4256,6 +4257,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "Microsoft.Data.Sqlite": {
+            "target": "Package",
+            "version": "[9.0.6, )"
           },
           "Microsoft.JSInterop": {
             "target": "Package",

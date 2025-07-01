@@ -141,6 +141,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
             "Microsoft.JSInterop": {
               "target": "Package",
               "version": "[9.0.6, )"
@@ -252,7 +256,7 @@
             },
             "Microsoft.Data.Sqlite": {
               "target": "Package",
-              "version": "[9.0.5, )"
+              "version": "[9.0.6, )"
             },
             "SnowflakeGenerator": {
               "target": "Package",

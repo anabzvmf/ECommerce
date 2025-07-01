@@ -19,7 +19,7 @@ namespace Backend
         internal static void InjetarDependencias(this IServiceCollection services)
         {
             // Carrinho dependencies
-            services.AddScoped<UseCases.CarrinhoCompras.ICarrinhoService, UseCases.CarrinhoCompras.CarrinhoService>();
+            services.AddScoped<UseCases.CarrinhoCompras.ICarrinhoService, UseCases.CarrinhoCompras.CarrinhoServiceUseCase>();
             services.AddScoped<Infra.CarrinhoCompras.ICarrinhoDAO, Infra.CarrinhoCompras.CarrinhoComprasDAO>();
 
             services.AddScoped<IPasswordHasher<Usuario>, PasswordHasher<Usuario>>();

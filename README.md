@@ -1,9 +1,10 @@
 GRUPO:
 Ana Beatriz Zaghetto,
-Julio Almeida,
+~~Julio Almeida,~~
 Julio Chiavegatto,
-Gabriel Leão,
-Iago Domingues.
+~~Gabriel Leão,~~
+Iago Domingues,
+Matheus da Cruz.
 
 TEMA: E-COMMERCE
 

@@ -11,7 +11,7 @@
           "DTO": "1.0.0",
           "Dapper": "2.1.66",
           "Microsoft.AspNetCore.Identity": "2.3.1",
-          "Microsoft.Data.Sqlite": "9.0.5",
+          "Microsoft.Data.Sqlite": "9.0.6",
           "Model": "1.0.0",
           "SnowflakeGenerator": "2.0.0"
         },
@@ -230,21 +230,21 @@
           }
         }
       },
-      "Microsoft.Data.Sqlite/9.0.5": {
+      "Microsoft.Data.Sqlite/9.0.6": {
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "9.0.5",
+          "Microsoft.Data.Sqlite.Core": "9.0.6",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10",
           "SQLitePCLRaw.core": "2.1.10"
         }
       },
-      "Microsoft.Data.Sqlite.Core/9.0.5": {
+      "Microsoft.Data.Sqlite.Core/9.0.6": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.1.10"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Data.Sqlite.dll": {
-            "assemblyVersion": "9.0.5.0",
-            "fileVersion": "9.0.525.21604"
+            "assemblyVersion": "9.0.6.0",
+            "fileVersion": "9.0.625.26607"
           }
         }
       },
@@ -745,19 +745,19 @@
       "path": "microsoft.aspnetcore.webutilities/2.3.0",
       "hashPath": "microsoft.aspnetcore.webutilities.2.3.0.nupkg.sha512"
     },
-    "Microsoft.Data.Sqlite/9.0.5": {
+    "Microsoft.Data.Sqlite/9.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Fht/vwX7uzPaIdlj1xtcpKD225GXjPOj7iW8934NNiTfBX5uqeCy2TdlPWPpLj+VPty/UmfgUSJSb55hXHqJMw==",
-      "path": "microsoft.data.sqlite/9.0.5",
-      "hashPath": "microsoft.data.sqlite.9.0.5.nupkg.sha512"
+      "sha512": "sha512-JtLL15uSBqqkDs6mhRc4rUbNPaJJCgN+gGQfLs+paD600td6V6YGgOreXWWoIKdq2eyRipggSJnE/eM5PlxYVA==",
+      "path": "microsoft.data.sqlite/9.0.6",
+      "hashPath": "microsoft.data.sqlite.9.0.6.nupkg.sha512"
     },
-    "Microsoft.Data.Sqlite.Core/9.0.5": {
+    "Microsoft.Data.Sqlite.Core/9.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cP5eBSqra4Ae80X72g0h2N+jdrA4BgoMQmz9JaQmKAEXUHw9N21DPIBqIyMjOo2fK9ISiGytlAOxBAJf1hEvqg==",
-      "path": "microsoft.data.sqlite.core/9.0.5",
-      "hashPath": "microsoft.data.sqlite.core.9.0.5.nupkg.sha512"
+      "sha512": "sha512-3auiudiViGzj1TidUdjuDqtP3+f6PBk4xdw6r9sBaTtkYoGc3AZn0cP8LgYZaLRnJBqY5bXRLB+qhjoB+iATzA==",
+      "path": "microsoft.data.sqlite.core/9.0.6",
+      "hashPath": "microsoft.data.sqlite.core.9.0.6.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
       "type": "package",

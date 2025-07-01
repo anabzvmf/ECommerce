@@ -298,10 +298,10 @@
           }
         }
       },
-      "Microsoft.Data.Sqlite/9.0.5": {
+      "Microsoft.Data.Sqlite/9.0.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "9.0.5",
+          "Microsoft.Data.Sqlite.Core": "9.0.6",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10",
           "SQLitePCLRaw.core": "2.1.10"
         },
@@ -312,7 +312,7 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.Data.Sqlite.Core/9.0.5": {
+      "Microsoft.Data.Sqlite.Core/9.0.6": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.1.10"
@@ -919,7 +919,7 @@
           "DTO": "1.0.0",
           "Dapper": "2.1.66",
           "Microsoft.AspNetCore.Identity": "2.3.1",
-          "Microsoft.Data.Sqlite": "9.0.5",
+          "Microsoft.Data.Sqlite": "9.0.6",
           "Model": "1.0.0",
           "SnowflakeGenerator": "2.0.0"
         },
@@ -1184,24 +1184,24 @@
         "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
-    "Microsoft.Data.Sqlite/9.0.5": {
-      "sha512": "Fht/vwX7uzPaIdlj1xtcpKD225GXjPOj7iW8934NNiTfBX5uqeCy2TdlPWPpLj+VPty/UmfgUSJSb55hXHqJMw==",
+    "Microsoft.Data.Sqlite/9.0.6": {
+      "sha512": "JtLL15uSBqqkDs6mhRc4rUbNPaJJCgN+gGQfLs+paD600td6V6YGgOreXWWoIKdq2eyRipggSJnE/eM5PlxYVA==",
       "type": "package",
-      "path": "microsoft.data.sqlite/9.0.5",
+      "path": "microsoft.data.sqlite/9.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "PACKAGE.md",
         "lib/netstandard2.0/_._",
-        "microsoft.data.sqlite.9.0.5.nupkg.sha512",
+        "microsoft.data.sqlite.9.0.6.nupkg.sha512",
         "microsoft.data.sqlite.nuspec"
       ]
     },
-    "Microsoft.Data.Sqlite.Core/9.0.5": {
-      "sha512": "cP5eBSqra4Ae80X72g0h2N+jdrA4BgoMQmz9JaQmKAEXUHw9N21DPIBqIyMjOo2fK9ISiGytlAOxBAJf1hEvqg==",
+    "Microsoft.Data.Sqlite.Core/9.0.6": {
+      "sha512": "3auiudiViGzj1TidUdjuDqtP3+f6PBk4xdw6r9sBaTtkYoGc3AZn0cP8LgYZaLRnJBqY5bXRLB+qhjoB+iATzA==",
       "type": "package",
-      "path": "microsoft.data.sqlite.core/9.0.5",
+      "path": "microsoft.data.sqlite.core/9.0.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1213,7 +1213,7 @@
         "lib/net8.0/Microsoft.Data.Sqlite.xml",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
-        "microsoft.data.sqlite.core.9.0.5.nupkg.sha512",
+        "microsoft.data.sqlite.core.9.0.6.nupkg.sha512",
         "microsoft.data.sqlite.core.nuspec"
       ]
     },
@@ -2168,41 +2168,48 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mathe\\.nuget\\packages\\": {}
+    "C:\\Users\\Iago\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\UseCases\\UseCases.csproj",
+      "projectUniqueName": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\UseCases\\UseCases.csproj",
       "projectName": "UseCases",
-      "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\UseCases\\UseCases.csproj",
-      "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\UseCases\\obj\\",
+      "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\UseCases\\UseCases.csproj",
+      "packagesPath": "C:\\Users\\Iago\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\UseCases\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Iago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\DTO\\DTO.csproj"
+            "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj": {
+              "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\DTO\\DTO.csproj"
             },
-            "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Infra\\Infra.csproj": {
-              "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Infra\\Infra.csproj"
+            "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj": {
+              "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Infra\\Infra.csproj"
             },
-            "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\Mappers.csproj": {
-              "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Mappers\\Mappers.csproj"
+            "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\Mappers.csproj": {
+              "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Mappers\\Mappers.csproj"
             },
-            "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\ECommerce\\Model\\Model.csproj"
+            "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Iago\\Documents\\PWA\\ECommerce\\Model\\Model.csproj"
             }
           }
         }
@@ -2217,7 +2224,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -2238,7 +2245,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

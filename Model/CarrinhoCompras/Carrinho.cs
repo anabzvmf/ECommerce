@@ -7,6 +7,8 @@ namespace Model.CarrinhoCompras
     {
         public List<ItemCarrinho> Itens { get; set; } = new List<ItemCarrinho>();
 
+        public long usuarioId { get; set; }
+
         public double valorFinal
         {
             get
