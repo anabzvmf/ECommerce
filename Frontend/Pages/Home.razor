@@ -1,9 +1,11 @@
 ﻿@page "/"
-@using Frontend.Componentes
-@using DTO.Produtos
-@using Helpers
-@inject IJSRuntime JS
-@inject Frontend.Helpers.UsuarioService UsuarioService
+@using Frontend.Componentes;
+@using DTO.Produtos;
+@using Helpers;
+@using UseCases.ControleAcessos;
+@inject IJSRuntime JS;
+@inject IUsuarioService UsuarioService;
+
 
 <div class="max-w-7xl mx-auto">
     <!-- Hero Section -->
@@ -23,7 +25,7 @@
     {
         <div class="alert alert-info text-center">@Mensagem</div>
     }
-    if (produtos == null)
+    @if (produtos == null)
     {
         <div class="text-center">Carregando produtos...</div>
     }
@@ -36,14 +38,14 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach (var produto in produtos)
             {
-                <div class="bg-white p-4 rounded-lg shadow-md">
+                <div class="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between ">
                     <img src="@produto.ImagemUrl" alt="@produto.Nome" class="w-full h-48 object-cover rounded-md mb-4" />
-                    <h3 class="text-xl font-semibold text-blue-600">@produto.Nome</h3>
-                    <p class="text-gray-700">@produto.Descricao</p>
+                    <h3 class="text-xl font-semibold text-blue-600 truncate">@produto.Nome</h3>
+                    <p class="text-gray-700 truncate">@produto.Descricao</p>
                     <p class="mt-2 text-lg font-bold text-blue-500">R$ @produto.Preco</p>
                     <p class="mt-2 text-sm text-gray-500">Estoque: @produto.Estoque</p>
 
-                    <div class="mt-4 flex justify-between items-center">
+                    <div class="mt-4 flex justify-between items-center flex-grow">
                         <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" @onclick="() => AdicionarProdutoAoCarrinho(produto.Id)">
                             Carrinho
                         </button>
@@ -104,29 +106,40 @@
 
     private async Task AdicionarProdutoAoCarrinho(long produtoId)
     {
-        Mensagem = null;
-        var usuario = await UsuarioService.ObterUsuarioLogadoAsync();
-        if (usuario == null)
+        try
         {
-            Mensagem = "Você precisa estar logado para adicionar ao carrinho.";
-            StateHasChanged();
-            return;
+
+            Mensagem = null;
+            var usuario = await UsuarioService.ObterUsuarioLogadoAsync();
+            if (usuario == null)
+            {
+                Mensagem = "Você precisa estar logado para adicionar ao carrinho.";
+                StateHasChanged();
+                return;
+            }
+            var idUsuario = usuario?.Id ?? 0;
+            if (idUsuario == 0)
+            {
+                Mensagem = "Erro ao identificar o usuário logado. Faça login novamente.";
+                StateHasChanged();
+                return;
+            }
+            var item = new DTO.Carrinho.CarrinhoItemDTO
+            {
+                UsuarioId = idUsuario,
+                ProdutoId = produtoId,
+                Quantidade = 1
+            };
+            await ApiBackend.PostAsync<object, DTO.Carrinho.CarrinhoItemDTO>("carrinho/adicionar", item);
+            Mensagem = "Produto adicionado ao carrinho!";
         }
-        var idUsuario = usuario?.Id ?? 0;
-        if (idUsuario == 0)
+        catch
         {
-            Mensagem = "Erro ao identificar o usuário logado. Faça login novamente.";
-            StateHasChanged();
-            return;
+            Mensagem = "Ocorreu um erro. Recarregue a página";
         }
-        var item = new DTO.Carrinho.CarrinhoItemDTO
+        finally
         {
-            UsuarioId = idUsuario,
-            ProdutoId = produtoId,
-            Quantidade = 1
-        };
-        await ApiBackend.PostAsync<object, DTO.Carrinho.CarrinhoItemDTO>("carrinho/adicionar", item);
-        Mensagem = "Produto adicionado ao carrinho!";
-        StateHasChanged();
+            StateHasChanged();
+        }
     }
 }
